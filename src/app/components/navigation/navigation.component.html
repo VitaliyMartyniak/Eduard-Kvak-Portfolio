@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="sticky-wrapper">
+    <nav>
+      <a class="underline-animation" routerLink="/home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a class="underline-animation" routerLink="/about-me" [routerLinkActive]="'active'">About me</a>
+      <a class="underline-animation" routerLink="/projects" [routerLinkActive]="'active'">Projects</a>
+      <a class="underline-animation" routerLink="/contacts" [routerLinkActive]="'active'">Contacts</a>
+
+      <a class="underline-animation resume-link" (click)="downloadPdf()">Resumé</a>
+    </nav>
+  </div>
+</div>

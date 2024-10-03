@@ -1,0 +1,210 @@
+<header>
+  <app-navigation></app-navigation>
+</header>
+
+<div class="about-me-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="main-info">
+      <div>
+        <h2>
+          About me
+        </h2>
+
+        <p>
+          With over 7 years of experience in product design and the tech industry, I excel in crafting solutions that harmonize user needs with business goals.
+        </p>
+
+        <p>
+          My design approach is driven by thorough research and data insights, ensuring that every project combines user needs with business objectives.
+          To continuously evolve my expertise I actively pursue further education through various courses, lectures, and books applying received
+          knowledge directly to my projects.
+        </p>
+
+        <p>
+          Beyond my design work, I am passionate about fostering growth in the design community. I mentor aspiring designers, sharing my
+          expertise through content creation and lectures, helping others to advance their skills and careers in the design field.
+        </p>
+
+        <button class="primary-button download-cv-button" (click)="downloadPdf()">Download CV</button>
+      </div>
+
+      <div class="photo"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="about-me-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+
+    <div class="personal-statistic">
+      <div class="statistic-item">
+        <h4>Years of experiece</h4>
+        <h2>
+          <app-number-animation [targetNumber]="7"></app-number-animation>+
+        </h2>
+      </div>
+      <div class="statistic-item">
+        <h4>Projects complete</h4>
+        <h2>
+          <app-number-animation [targetNumber]="25"></app-number-animation>+
+        </h2>
+      </div>
+      <div class="statistic-item">
+        <h4>Industries served</h4>
+        <h2>
+          <app-number-animation [targetNumber]="8"></app-number-animation>+
+        </h2>
+      </div>
+      <div class="statistic-item">
+        <h4>Research conducted</h4>
+        <h2>
+          <app-number-animation [targetNumber]="30"></app-number-animation>+
+        </h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+
+    <div class="key-strengths">
+      <h2>Key strengths</h2>
+
+      <app-simple-cards [cards]="cards"></app-simple-cards>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+
+    <div class="skill-and-toolset-wrapper">
+      <h2>Skill & toolset</h2>
+
+      <div class="skill-and-toolset">
+        <div *ngFor="let skillAndToolsetItem of skillAndToolsetItems" class="skill-and-toolset-item">
+          <h4>{{skillAndToolsetItem.title}}</h4>
+          <div class="items-list">
+            <div *ngFor="let item of skillAndToolsetItem.items" class="item">
+              <div class="icon {{item.icon}}"></div>
+              <span class="text">{{item.name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="education-block">
+      <h2>Education</h2>
+
+      <div class="education-item">
+        <p>Lviv Polytechnic National University</p>
+        <span>Bachelor’s degree, Computer Engineering</span>
+      </div>
+      <div class="education-item">
+        <p>Smart Interface Patterns</p>
+        <span>Deep examination of common components and design patterns in modern interfaces — desktop and mobile.
+        Advanced configurators, Complex tables, Maps, Data Visualization, and more.</span>
+      </div>
+      <div class="education-item">
+        <p>Inclusive Web Design</p>
+        <span>Study of WCAG guidelines. Practicing in creating the user-friendly interface for inclusive users.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="experience-block">
+      <h2>Experience</h2>
+
+      <div class="experiences">
+        <div *ngFor="let item of experienceList" class="experience-item">
+          <h3>{{item.name}}</h3>
+          <p class="description">{{item.description}}</p>
+
+          <div class="additional-data">
+            <div class="left-side">
+              <div class="details">
+                <p>Period</p>
+                <span>{{item.period}}</span>
+              </div>
+              <div class="details">
+                <p>Position</p>
+                <span>{{item.position}}</span>
+              </div>
+              <div class="details">
+                <p>Company type</p>
+                <span>{{item.companyType}}</span>
+              </div>
+            </div>
+
+            <div class="right-side">
+              <p>Responsibilities</p>
+
+              <div class="one-column-block">
+                <div *ngFor="let text of item.responsibilities" class="block-item">
+                  <img src="assets/images/dot.svg" alt="dot">
+                  <span>{{text}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="know-better-wrapper">
+      <h2>Get to know me better</h2>
+
+      <div class="know-better-block">
+        <div class="know-better-side">
+          <div class="know-better-item">
+            <img src="assets/images/dot.svg" alt="dot">
+            <span>I'm all about the nitty-gritty details. I can ensure that every aspect is meticulously refined and executed to perfection.</span>
+          </div>
+          <div class="know-better-item">
+            <img src="assets/images/two-dot.svg" alt="two-dot">
+            <span>When it comes to computer games, count me in! I'm always on the lookout for the latest and greatest gamification techniques to spice up my designs.</span>
+          </div>
+          <div class="know-better-item">
+            <img src="assets/images/three-dot.svg" alt="three-dot">
+            <span>Manga is my jam! Whether it's the epic battles of Bleach or the mind-bending plots of Dr. Stone, I'm hooked.</span>
+          </div>
+        </div>
+        <div class="know-better-side">
+          <div class="know-better-item">
+            <img src="assets/images/four-dot.svg" alt="four-dot">
+            <span>Besides English and Ukrainian, I'm diving into German. As the saying goes, the more languages you know, the richer your experiences become.</span>
+          </div>
+          <div class="know-better-item">
+            <img src="assets/images/five-dot.svg" alt="five-dot">
+            <span>I love dogs and have a furry friend, a Yorkshire Terrier, called Pixel. He is the cutest dog ever :)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-me-wrapper lighten">
+  <app-footer-navigation></app-footer-navigation>
+</div>
+
+

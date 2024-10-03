@@ -1,0 +1,12 @@
+<div class="section" [ngClass]="{ 'bottom-line': showBottomLine}">
+  <div class="section-header" (click)="toggleSection()">
+    <h2 class="section-title underline-animation">{{ title }}</h2>
+    <button class="toggle-btn">
+      <img [@rotate]="isExpanded ? 'expanded' : 'collapsed'" src="../../../assets/images/plus-sign.svg" alt="plus sign">
+      <!--      <img *ngIf="isExpanded" src="../../../assets/images/cross-sign.svg" alt="cross sign">-->
+    </button>
+  </div>
+  <div class="section-content no-fade-animation" [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'">
+    <ng-content></ng-content>
+  </div>
+</div>

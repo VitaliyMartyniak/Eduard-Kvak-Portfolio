@@ -1,0 +1,459 @@
+.about-me-wrapper {
+  background-color: #040F0F;
+
+  &.lighten {
+    background-color: #0E1919;
+  }
+
+  .content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      margin-top: 0;
+      margin-bottom: 48px;
+    }
+  }
+
+  .main-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 76px;
+    padding-bottom: 76px;
+
+    h2 {
+      margin: 0 0 16px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+      margin: 0 0 32px;
+    }
+
+    .download-cv-button {
+      margin-top: 48px;
+    }
+
+    .photo {
+      width: 392px;
+      min-width: 392px;
+      height: 428px;
+      border: 2px solid #D57A66;
+      border-right: 6px solid #D57A66;
+      border-bottom: 6px solid #D57A66;
+      border-radius: 48px;
+      background: url("/assets/images/eduard-photo.png") center no-repeat;
+      background-size: cover;
+      margin-left: 56px;
+    }
+  }
+
+  .personal-statistic {
+    display: flex;
+    padding: 76px 0;
+
+    .statistic-item {
+      width: 25%;
+      border-right: 2px solid #DBD1C5;
+      padding: 0 24px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        margin: 0 0 8px;
+        color: #D57A66;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+
+  .key-strengths {
+    padding-top: 76px;
+    margin-bottom: 52px;
+  }
+
+  .skill-and-toolset-wrapper {
+    padding: 76px 0 44px;
+
+    .skill-and-toolset {
+
+      .skill-and-toolset-item {
+        margin-bottom: 20px;
+
+        h4 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+          margin: 0 0 16px;
+          color: #D57A66;
+        }
+
+        .items-list {
+          display: flex;
+          flex-wrap: wrap;
+
+          .item {
+            display: flex;
+            align-items: center;
+            padding: 4px 12px;
+            border: 2px solid #DBD1C5;
+            border-radius: 8px;
+            margin-right: 12px;
+            margin-bottom: 12px;
+
+            .icon {
+              width: 24px;
+              height: 24px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              margin-right: 8px;
+
+              &.figma {
+                background-image: url("/assets/images/figma.svg");
+              }
+
+              &.sketch {
+                background-image: url("/assets/images/sketch.svg");
+              }
+
+              &.adobe {
+                background-image: url("/assets/images/adobe.svg");
+              }
+
+              &.miro {
+                background-image: url("/assets/images/miro.svg");
+              }
+
+              &.whimsical {
+                background-image: url("/assets/images/whimsical.svg");
+              }
+
+              &.protopie {
+                background-image: url("/assets/images/protopie.svg");
+              }
+
+              &.zeroheight {
+                background-image: url("/assets/images/zeroheight.svg");
+              }
+
+              &.analytics {
+                background-image: url("/assets/images/analytics.svg");
+              }
+
+              &.pendo {
+                background-image: url("/assets/images/pendo.svg");
+              }
+
+              &.hotjar {
+                background-image: url("/assets/images/hotjar.svg");
+              }
+
+              &.qualitative {
+                background-image: url("/assets/images/qualitative.svg");
+              }
+
+              &.quantitative {
+                background-image: url("/assets/images/quantitative.svg");
+              }
+
+              &.competitor {
+                background-image: url("/assets/images/competitor.svg");
+              }
+
+              &.design-thinking {
+                background-image: url("/assets/images/design-thinking.svg");
+              }
+
+              &.usability-testing {
+                background-image: url("/assets/images/usability-testing.svg");
+              }
+
+              &.web-design {
+                background-image: url("/assets/images/web-design.svg");
+              }
+
+              &.mobile-app-design {
+                background-image: url("/assets/images/mobile-app-design.svg");
+              }
+
+              &.heuristic-evaluation {
+                background-image: url("/assets/images/heuristic-evaluation.svg");
+              }
+
+              &.customer-journey {
+                background-image: url("/assets/images/customer-journey.svg");
+              }
+
+              &.user-flow {
+                background-image: url("/assets/images/user-flow.svg");
+              }
+
+              &.design-system {
+                background-image: url("/assets/images/design-system.svg");
+              }
+
+              &.ux-research {
+                background-image: url("/assets/images/ux-research.svg");
+              }
+
+              &.prototyping {
+                background-image: url("/assets/images/prototyping.svg");
+              }
+
+              &.data-driven-management {
+                background-image: url("/assets/images/data-driven-management.svg");
+              }
+
+              &.ux-strategy {
+                background-image: url("/assets/images/ux-strategy.svg");
+              }
+
+              &.embedded-systems {
+                background-image: url("/assets/images/embedded-systems.svg");
+              }
+
+              &.white-label {
+                background-image: url("/assets/images/white-label.svg");
+              }
+
+              &.team-management {
+                background-image: url("/assets/images/team-management.svg");
+              }
+
+              &.mentoring {
+                background-image: url("/assets/images/mentoring.svg");
+              }
+
+              &.html {
+                background-image: url("/assets/images/html.svg");
+              }
+
+              &.javascript {
+                background-image: url("/assets/images/javascript.svg");
+              }
+
+              &.problem-definition {
+                background-image: url("/assets/images/problem-definition.svg");
+              }
+
+              &.strategic-thinking {
+                background-image: url("/assets/images/strategic-thinking.svg");
+              }
+
+              &.product-growth {
+                background-image: url("/assets/images/product-growth.svg");
+              }
+
+              &.ab-testing {
+                background-image: url("/assets/images/ab-testing.svg");
+              }
+
+              &.palette-white {
+                background-image: url("/assets/images/palette-white.svg");
+              }
+
+              &.car {
+                background-image: url("/assets/images/car.svg");
+              }
+
+              &.accessibility {
+                background-image: url("/assets/images/accessibility.svg");
+              }
+
+              &.accessibility-white {
+                background-image: url("/assets/images/accessibility-white.svg");
+              }
+
+              &.integrations {
+                background-image: url("/assets/images/integrations.svg");
+              }
+            }
+
+            .text {
+              display: inline-block;
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .education-block {
+    padding: 76px 0 52px;
+
+    .education-item {
+      border-bottom: 4px solid #DBD1C5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 700;
+        color: #D57A66;
+        margin: 24px 0 0;
+      }
+
+      span {
+        display: inline-block;
+        color: #DBD1C5;
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .experience-block {
+    padding: 76px 0;
+
+    .experiences {
+
+      .experience-item {
+        padding: 48px;
+        border-radius: 48px;
+        border: 2px solid #D57A66;
+        border-right: 6px solid #D57A66;
+        border-bottom: 6px solid #D57A66;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h3 {
+          margin: 0 0 8px;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 48px;
+          color: #DBD1C5;
+        }
+
+        .description {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 32px;
+          margin: 0 0 32px;
+        }
+
+        .additional-data {
+          display: flex;
+          justify-content: space-between;
+
+          .left-side {
+            width: 39%;
+
+            .details {
+              margin-bottom: 16px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              p {
+                margin: 0 0 4px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 32px;
+                color: #D57A66;
+              }
+
+              span {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 32px;
+              }
+            }
+          }
+
+          .right-side {
+            width: 57%;
+
+            p {
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 32px;
+              margin: 0 0 12px;
+              color: #D57A66;
+            }
+
+            .one-column-block {
+
+              .block-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 8px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                span {
+                  font-size: 20px;
+                  display: inline-block;
+                  margin-left: 12px;
+                  line-height: 32px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .know-better-wrapper {
+    padding: 76px 0;
+
+    .know-better-block {
+      display: flex;
+      justify-content: space-between;
+
+      .know-better-side {
+        width: calc(50% - 20px);
+
+        .know-better-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          span {
+            font-size: 20px;
+            display: inline-block;
+            margin-left: 16px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}

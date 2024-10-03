@@ -1,0 +1,33 @@
+<div class="projects">
+  <a routerLink="/projects/{{project.name}}" *ngFor="let project of projects" class="project">
+    <div class="description">
+      <span class="title">{{project.title}}</span>
+      <h3 class="subtitle">
+        {{project.subtitle}}
+      </h3>
+      <span class="description-text">
+        {{project.descriptionText}}
+      </span>
+
+      <div class="details">
+        <div class="industries">
+          <div class="industry" *ngFor="let industry of project.industries">
+            #{{industry}}
+          </div>
+        </div>
+      </div>
+
+      <div class="contributions">
+        <p>Contribution</p>
+        <div class="contribution" *ngFor="let contribution of project.contributions">
+          <img src="assets/images/dot.svg" alt="dot">
+          <span>{{contribution}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo"
+         [ngStyle]="{'background-image': getBackgroundImageUrl(project.name)}"
+    ></div>
+  </a>
+</div>

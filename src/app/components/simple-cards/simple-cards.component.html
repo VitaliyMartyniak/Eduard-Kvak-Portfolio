@@ -1,0 +1,7 @@
+<div class="cards">
+  <div *ngFor="let card of cards" class="card" [ngStyle]="{width: twoColumns ? '49%' : '32%'}">
+    <div class="icon {{card.icon}}"></div>
+    <h4 class="title">{{card.title}}</h4>
+    <p class="text">{{card.text}}</p>
+  </div>
+</div>
