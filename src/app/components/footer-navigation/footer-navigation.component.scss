@@ -10,12 +10,25 @@
     line-height: 60px;
   }
 
+  h4 {
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #D57A66;
+  }
+
   .navigation {
     display: flex;
     justify-content: center;
 
     a {
-      margin-right: 16px;
+      margin-right: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
