@@ -33,10 +33,10 @@
         margin: 0 0 48px;
       }
 
-      a {
-        display: inline-block;
+      .greeting-links {
+        display: flex;
 
-        &.about-me-link {
+        a.about-me-link  {
           margin-left: 16px;
         }
       }
