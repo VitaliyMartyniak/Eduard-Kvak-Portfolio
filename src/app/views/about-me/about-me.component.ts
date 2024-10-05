@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {ExpandableSectionComponent} from "../../components/expandable-section/expandable-section.component";
-import {NgForOf} from "@angular/common";
+import { NgForOf, NgIf } from "@angular/common";
 import {Location} from '@angular/common';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import {map} from "rxjs";
@@ -24,7 +24,8 @@ import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directiv
     SimpleCardsComponent,
     FooterNavigationComponent,
     NumberAnimationComponent,
-    ScrollMonitorDirective
+    ScrollMonitorDirective,
+    NgIf
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
@@ -38,38 +39,32 @@ export class AboutMeComponent {
     {
       icon: 'medal',
       title: 'Proactive',
-      text: 'I take the initiative in identifying opportunities for improvement and act on them promptly. ' +
-        'My proactive approach ensures that projects are always moving forward and deadlines are met.'
+      text: 'I take initiative, act quickly, and keep projects on track to meet deadlines.'
     },
     {
       icon: 'graph',
       title: 'Committed to growth',
-      text: 'I am dedicated to continuous learning and professional development. I regularly engage in courses, ' +
-        'workshops, and reading to stay updated with the latest design trends and technologies.'
+      text: 'I’m always learning, staying up to date with the latest design trends and techniques.'
     },
     {
       icon: 'square',
       title: 'Detail-oriented',
-      text: 'I have a keen eye for detail, ensuring that every element of my design is polished and precise. This meticulousness ' +
-        'helps in creating high-quality, error-free deliverables.'
+      text: 'I focus on the details, ensuring every design is polished and high-quality.'
     },
     {
       icon: 'stack',
       title: 'Organized',
-      text: 'I excel at managing multiple projects simultaneously while maintaining a clear structure and prioritization. ' +
-        'My organizational skills ensure efficient workflow and timely completion of tasks.'
+      text: 'I maintain structure and prioritize tasks to ensure efficient workflows and timely delivery.'
     },
     {
       icon: 'people',
       title: 'Collaborative',
-      text: 'I thrive in team environments and excel at communication and collaboration. Working closely with cross-functional ' +
-        'teams, I ensure that everyone is aligned and working towards a common goal.'
+      text: 'I work well in teams, keeping everyone aligned and focused on shared goals.'
     },
     {
       icon: 'lamp',
       title: 'Creative thinker',
-      text: 'I approach problems with a creative mindset, finding innovative solutions that go beyond the conventional. ' +
-        'My creativity helps in designing unique and engaging user experiences.'
+      text: 'I solve problems creatively, finding innovative solutions for unique user experiences.'
     }
   ]
 
@@ -225,6 +220,10 @@ export class AboutMeComponent {
           icon: 'palette-white',
         },
         {
+          name: 'Guidelines',
+          icon: 'guidelines',
+        },
+        {
           name: 'Prototyping',
           icon: 'prototyping',
         },
@@ -260,71 +259,67 @@ export class AboutMeComponent {
   experienceList = [
     {
       name: 'Car IQ Inc.',
-      description: 'Car IQ Pay is the first payment platform to enable vehicles to initiate, validate, and complete authorized ' +
-        'transactions. The system eliminates the need for credit cards by connecting vehicles directly to merchants for secure, seamless payments.',
       period: 'Oct 2022 - Aug 2024',
       position: 'Senior-lead product designer',
       companyType: 'Product',
-      responsibilities: ['Leading the design team, creating and distributing tasks, approving design solutions.',
-        'Data analysis, creating and testing hypotheses, conducting user testing/ interviews, A/B testing, and more.',
-        'Close collaboration with developers, conducting design QA, and task creation.',
-        'Creating product architecture and mockups (mobile/web applications), integrations, white labels, prototypes, and more.',
-        'Creating design systems, documentation, and guidelines.',
-        'Collaboration with other departments, defining product growth/monetization.'
-      ]
+      responsibilities: ['Led the design team of 3 designers, created and distributed tasks, approved design solutions, doubling team output.',
+        'Created design systems, documentation, guidelines, and set up design principles that decreased the design process time by ~40%.',
+        'Conducted data analysis, user testing and interviews, A/B testing, created and tested hypotheses, etc. resulting in a ~60% improvement in usability and user engagement.',
+        'Collaborated with developers, conducted design QA, set up bug tracker system, reducing the sprint release issues by ~35%.',
+        'Created mobile/web applications, integrations, white-labels, increasing SUS score to 82,8% and task completion rate to 93.6%.',
+        'Collaborated with other departments, participated in product growth/monetisation and brought the product to the market leaders.'
+      ],
+      relatedProjectTitle: 'Payment platform for fleets',
+      relatedProjectSubtitle: 'Enables vehicles to initiate, validate, and complete authorized transactions.',
+      relatedProjectLink: 'car-iq-inc'
     },
     {
       name: 'Cieden',
-      description: 'Cieden is a digital product design and marketing agency with operations in the United States and Eastern Europe. ' +
-        'The agency specializes in creating user-centric designs and providing strategic marketing solutions for a diverse range of clients.',
       period: 'Jun 2021 - Oct 2022',
       position: 'Senior-lead product designer',
       companyType: 'Outsource, Outstaff',
-      responsibilities: ['Leading the design team, hiring new designers, and assisting with managing internal company structure.',
-        'Leading the calls with clients and stakeholders.',
-        'Data analysis, including metrics & KPIs, creating and testing hypotheses, conducting user testing, interviews, A/B testing, audits, and more.',
-        'Creating mobile/web applications, prototypes, design systems, documentation, and guidelines.',
-        'Conducting knowledge sharings and lectures for team members.',
-        'Active participation in the pre-sales stage.'
-      ]
+      responsibilities: ['Led the design team of 4 designers, hiring new designers, and assisting with managing internal company structure.',
+        'Led the calls with clients and stakeholders.',
+        'Conducted data analysis, competitor/user researches, audits, user testing/interviews, created and testing hypotheses.',
+        'Created mobile/web applications, prototypes, design systems, documentation, and guidelines.',
+        'Conducted knowledge sharings and lectures for team members.',
+        'Participated in the pre-sales stage.'
+      ],
+      relatedProjectTitle: 'Q&A platform & e-Book reader',
+      relatedProjectSubtitle: 'Provides seamless content sharing and engaging interactive reading.',
+      relatedProjectLink: 'cieden'
     },
     {
       name: 'Excited',
-      description: 'Excited is a digital product design agency that focuses on creating innovative and user-friendly designs for a variety' +
-        ' of digital platforms, helping clients enhance their online presence and user engagement.',
       period: 'May 2020 - Mar 2021',
       position: 'Product designer',
       companyType: 'Outsource',
-      responsibilities: ['Leading the calls with clients and stakeholders.',
-        'Data analysis, creating and testing hypotheses, conducting competitor/user research, audits.',
-        'Creating mobile/web applications, prototypes, design systems.',
-        'Conducting knowledge sharings for team members.'
+      responsibilities: ['Led the calls with clients and stakeholders.',
+        'Conducted data analysis, competitor/user researches, audits, created and testing hypotheses.',
+        'Created mobile/web applications, prototypes, design systems.',
+        'Conducted knowledge sharings for team members.'
       ]
     },
     {
       name: 'Sigma Software Group',
-      description: 'Sigma Software Group is a full-cycle company that provides top-quality software development, ' +
-        'graphic design, testing, and support services to a global clientele, focusing on innovative and efficient solutions.',
       period: 'Sep 2019 - May 2020',
       position: 'UX/UI designer',
       companyType: 'Outsource, Outstaff',
-      responsibilities: ['Participating in the calls with clients and stakeholders.',
-        'Data analysis, creating and testing hypotheses, conducting competitor/user research, audits.',
-        'Creating mobile/web applications, prototypes, design systems.',
-        'Creating printing materials, branding, logos, presentation templates.',
-        'Creating video materials and animations.'
+      responsibilities: ['Participated in the calls with clients and stakeholders.',
+        'Conducted data analysis, competitor/user researches, audits.',
+        'Created mobile/web applications, prototypes, design systems.',
+        'Created printing materials, branding, logos, presentation templates.',
+        'Created video materials and animations.'
       ]
     },
     {
       name: 'FocusWeb Studio',
-      description: 'FocusWeb Studio is a digital design agency that specializes in creating visually appealing ' +
-        'and highly functional websites and mobile applications, providing clients with custom solutions to enhance their digital presence.',
       period: 'Oct 2018 - Aug 2019',
       position: 'UX/UI designer',
       companyType: 'Outsource',
-      responsibilities: ['Participating in the calls with clients and stakeholders.',
-        'Conducting competitor/user research, audits.',
-        'Creating mobile applications, landing/corporate websites.'
+      responsibilities: ['Participated in the calls with clients and stakeholders.',
+        'Conducted competitor/user researches, audits.',
+        'Created mobile/web applications, landing/corporate websites.'
       ]
     }
   ]

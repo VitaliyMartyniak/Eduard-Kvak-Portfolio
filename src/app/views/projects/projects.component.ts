@@ -32,7 +32,9 @@ export class ProjectsComponent {
     {
       name: 'factually-health',
       title: 'Factually Health',
-      subtitle: 'An AI-powered platform that provides accurate, comprehensive information on any health topic, combating misinformation and improving patient engagement.',
+      subtitle: 'AI-driven platform for companies and patients in the health industry',
+      descriptionText: 'A comprehensive solution that helps patients access credible, up-to-date health information.',
+      industries: ['HealthTech'],
       contributions: [
         'Web app (responsive)',
         'Guidelines for developers',
@@ -43,46 +45,30 @@ export class ProjectsComponent {
     {
       name: 'car-iq-pay',
       title: 'Car IQ Pay',
-      subtitle: 'The first payment platform to enable vehicles to initiate, validate, and complete authorized transactions.',
+      subtitle: 'Payment platform for fleets',
+      descriptionText: 'A revolutionary solution that enables vehicles to initiate, validate, and complete authorized transactions.',
+      industries: ['Automotive', 'FinTech'],
       contributions: [
         'Mobile app (iOS & Android)',
-        'Integrations (Apple & Google Pay, White-labels, and more)',
         'Web app (responsive)',
-        'Design system & Documentation',
-        'Guidelines for designers',
-        'Prototypes, Email template, Invoice template, and more'
+        'Integrations (Apple & Google Pay), White labels',
+        'Apple CarPlay/Android Auto',
+        'Design systems, Documentation, Guidelines',
+        'Prototypes, Email template, Invoice template'
       ]
     },
     {
       name: 'clarity',
       title: 'Clarity',
-      subtitle: 'Advanced solutions for seamless content sharing and engaging interactive reading.',
+      subtitle: 'Q&A platform & e-Book reader',
+      descriptionText: 'Provides seamless content sharing and engaging interactive reading.',
+      industries: ['EdTech'],
       contributions: [
         'Q&A platform',
         'e-Book reader (responsive)',
         'Marketing website',
         'Design system',
       ]
-    },
-    {
-      name: 'intelas',
-      title: 'Intelas',
-      subtitle: 'A leading platform in financial data standardization, aimed at real estate asset managers and accountants.',
-      contributions: [
-        'Web app',
-        'Report builder',
-        'Design system',
-        'Prototype',
-      ]
-    },
-    {
-      name: 'formobile',
-      title: 'FORMobile',
-      subtitle: 'An innovative solution empowering citizens to easily report and track government-related issues.',
-      contributions: [
-        'Mobile app (iOS & Android)',
-        'Design system',
-      ]
-    },
+    }
   ]
 }

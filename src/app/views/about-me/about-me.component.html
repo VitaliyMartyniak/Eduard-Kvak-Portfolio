@@ -11,21 +11,20 @@
         </h2>
 
         <p>
-          With over 7 years of experience in product design and the tech industry, I excel in crafting solutions that harmonize user needs with business goals.
+          I’m a Senior Product Designer with over 7 years of experience, focused on creating solutions that align user needs with business goals.
         </p>
 
         <p>
-          My design approach is driven by thorough research and data insights, ensuring that every project combines user needs with business objectives.
-          To continuously evolve my expertise I actively pursue further education through various courses, lectures, and books applying received
-          knowledge directly to my projects.
+          My design process is based on research and data insights, allowing me to create solutions that meet user expectations and
+          drive business objectives. I continuously expand my skills by learning through courses, lectures, and books, always applying
+          new insights to improve my designs.
         </p>
 
         <p>
-          Beyond my design work, I am passionate about fostering growth in the design community. I mentor aspiring designers, sharing my
-          expertise through content creation and lectures, helping others to advance their skills and careers in the design field.
+          Beyond the design work, I enjoy sharing my knowledge and innovative design solutions through lectures and design practices.
         </p>
 
-        <button class="primary-button download-cv-button" (click)="downloadPdf()">Download CV</button>
+        <button class="primary-button download-cv-button" (click)="downloadPdf()">View my resumé</button>
       </div>
 
       <div class="photo"></div>
@@ -103,43 +102,21 @@
 
 <div class="about-me-wrapper fade-animation" appScrollMonitor>
   <div class="content-wrapper">
-    <div class="education-block">
-      <h2>Education</h2>
-
-      <div class="education-item">
-        <p>Lviv Polytechnic National University</p>
-        <span>Bachelor’s degree, Computer Engineering</span>
-      </div>
-      <div class="education-item">
-        <p>Smart Interface Patterns</p>
-        <span>Deep examination of common components and design patterns in modern interfaces — desktop and mobile.
-        Advanced configurators, Complex tables, Maps, Data Visualization, and more.</span>
-      </div>
-      <div class="education-item">
-        <p>Inclusive Web Design</p>
-        <span>Study of WCAG guidelines. Practicing in creating the user-friendly interface for inclusive users.</span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div class="about-me-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
     <div class="experience-block">
+
       <h2>Experience</h2>
 
       <div class="experiences">
         <div *ngFor="let item of experienceList" class="experience-item">
-          <h3>{{item.name}}</h3>
-          <p class="description">{{item.description}}</p>
+
+          <div class="experience-header">
+            <h3>{{item.name}}</h3>
+
+            <span class="work-period">{{item.period}}</span>
+          </div>
 
           <div class="additional-data">
             <div class="left-side">
-              <div class="details">
-                <p>Period</p>
-                <span>{{item.period}}</span>
-              </div>
               <div class="details">
                 <p>Position</p>
                 <span>{{item.position}}</span>
@@ -161,7 +138,41 @@
               </div>
             </div>
           </div>
+
+          <a *ngIf="item?.relatedProjectTitle" routerLink="/projects/{{item.relatedProjectLink}}" class="related-project-block">
+            <div>
+              <p>Related project</p>
+              <h3 class="title">{{item.relatedProjectTitle}}</h3>
+              <span class="subtitle">{{item.relatedProjectSubtitle}}</span>
+            </div>
+
+            <div class="related-project-button"></div>
+          </a>
+
         </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="about-me-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="education-block">
+      <h2>Education</h2>
+
+      <div class="education-item">
+        <p>Lviv Polytechnic National University</p>
+        <span>Bachelor’s degree, Computer Engineering</span>
+      </div>
+      <div class="education-item">
+        <p>Smart Interface Patterns</p>
+        <span>Deep examination of common components and design patterns in modern interfaces — desktop and mobile.
+        Advanced configurators, Complex tables, Maps, Data Visualization, and more.</span>
+      </div>
+      <div class="education-item">
+        <p>Inclusive Web Design</p>
+        <span>Study of WCAG guidelines. Practicing in creating the user-friendly interface for inclusive users.</span>
       </div>
     </div>
 
@@ -183,19 +194,15 @@
             <img src="assets/images/two-dot.svg" alt="two-dot">
             <span>When it comes to computer games, count me in! I'm always on the lookout for the latest and greatest gamification techniques to spice up my designs.</span>
           </div>
+        </div>
+        <div class="know-better-side">
           <div class="know-better-item">
             <img src="assets/images/three-dot.svg" alt="three-dot">
             <span>Manga is my jam! Whether it's the epic battles of Bleach or the mind-bending plots of Dr. Stone, I'm hooked.</span>
           </div>
-        </div>
-        <div class="know-better-side">
           <div class="know-better-item">
             <img src="assets/images/four-dot.svg" alt="four-dot">
-            <span>Besides English and Ukrainian, I'm diving into German. As the saying goes, the more languages you know, the richer your experiences become.</span>
-          </div>
-          <div class="know-better-item">
-            <img src="assets/images/five-dot.svg" alt="five-dot">
-            <span>I love dogs and have a furry friend, a Yorkshire Terrier, called Pixel. He is the cutest dog ever :)</span>
+            <span>I love dogs and have a furry friend, a Yorkshire Terrier. His name is Pixel and he always helps me to design the best solution :)</span>
           </div>
         </div>
       </div>
