@@ -1,0 +1,32 @@
+.carousel {
+  overflow: hidden;
+  position: relative; /* Necessary for fill-mode images */
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll linear infinite;
+  animation-duration: 15s; /* Adjust the duration for smooth scrolling */
+}
+
+.carousel-item {
+  min-height: 412px;
+  min-width: 676px;
+  margin-right: 48px; /* Space between images */
+  position: relative; /* Necessary for fill-mode images */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 8px solid #0E1919;
+  border-radius: 16px;
+}
+
+/* Keyframe animation for smooth scrolling */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

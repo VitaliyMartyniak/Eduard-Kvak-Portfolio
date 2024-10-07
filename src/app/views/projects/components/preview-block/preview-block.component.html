@@ -1,0 +1,33 @@
+<div
+  class="interface"
+  [ngStyle]="{'background-image': getBackgroundImageUrl(backgroundImage), height: height + 'px'}"
+>
+  <h4 class="title">{{title}}</h4>
+
+  <div *ngIf="phone">
+    <div
+      class="phone-block"
+      [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"
+    ></div>
+  </div>
+
+  <div *ngIf="desktop && screensNumber === 1">
+    <div
+      class="desktop-block"
+      [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"
+    ></div>
+  </div>
+
+  <div *ngIf="desktop && screensNumber === 2">
+    <div
+      class="desktop-block-with-two-screens flex-row space-between"
+    >
+      <div class="first-screen" [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"></div>
+      <div class="second-screen" [ngStyle]="{'background-image': deviceSecondImage ? getBackgroundImageUrl(deviceSecondImage) : ''}"></div>
+    </div>
+  </div>
+
+  <div *ngIf="custom">
+    <ng-content></ng-content>
+  </div>
+</div>

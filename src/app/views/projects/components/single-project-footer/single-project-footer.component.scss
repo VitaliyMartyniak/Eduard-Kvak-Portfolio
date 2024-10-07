@@ -1,0 +1,19 @@
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 76px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0 0 16px;
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+}

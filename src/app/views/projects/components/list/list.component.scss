@@ -1,0 +1,27 @@
+.list {
+
+  h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #D57A66;
+    margin: 0 0 16px;
+  }
+
+  .block-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 20px;
+      display: inline-block;
+      margin-left: 16px;
+      line-height: 32px;
+    }
+  }
+}

@@ -29,6 +29,33 @@ body {
   }
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-coulumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.centered-hor {
+  justify-content: center;
+}
+
+.centered-vert {
+  align-items: center;
+}
+
+.centered-full {
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 a {
   text-decoration: none;
 
@@ -46,7 +73,7 @@ button {
 }
 
 .background-image {
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -147,8 +174,11 @@ button {
 }
 
 .project-wrapper {
-  width: 100%;
   color: #DBD1C5;
+
+  &.lighten {
+    background-color: #0E1919;
+  }
 
   .content-wrapper {
     width: 90%;
@@ -164,56 +194,86 @@ button {
       margin-top: 76px;
       margin-bottom: 76px;
 
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        color: #D57A66;
+        margin: 0 0 12px;
+      }
+
       h2 {
         font-size: 40px;
         font-weight: 700;
         line-height: 60px;
-        margin: 0 0 16px;
+        margin: 0 0 12px;
       }
 
-      .project-links {
+      .industries-and-project-links {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 48px;
 
-        a {
+        .industries {
           display: flex;
-          align-items: center;
-          color: #D57A66;
-          font-size: 20px;
-          font-weight: 700;
-          line-height: 32px;
-          margin-right: 48px;
+          flex-direction: row;
+          flex-wrap: wrap;
 
-          span {
-            position: relative;
+          .industry {
+            border-radius: 12px;
+            padding: 4px 12px;
+            font-size: 20px;
+            line-height: 32px;
+            border: 2px solid #F7EDE2;
+            font-weight: 400;
+            margin-right: 12px;
           }
+        }
 
-          & span::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #D57A66;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease-in-out, transform-origin 0s 0.3s;
-          }
+        .project-links {
+          display: flex;
+          flex-wrap: wrap;
 
-          &:hover span::after {
-            transform: scaleX(1);
-            transform-origin: right;
-          }
+          a {
+            display: flex;
+            align-items: center;
+            color: #D57A66;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-right: 48px;
 
-          &:not(:hover) span::after {
-            transform: scaleX(0);
-            transform-origin: left;
-          }
+            span {
+              position: relative;
+            }
 
-          img {
-            margin-right: 8px;
+            & span::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: -2px;
+              left: 0;
+              background-color: #D57A66;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.3s ease-in-out, transform-origin 0s 0.3s;
+            }
+
+            &:hover span::after {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+
+            &:not(:hover) span::after {
+              transform: scaleX(0);
+              transform-origin: left;
+            }
+
+            img {
+              margin-right: 8px;
+            }
           }
         }
       }
@@ -223,7 +283,7 @@ button {
       font-size: 40px;
       font-weight: 700;
       line-height: 60px;
-      margin: 0 0 16px;
+      margin: 0 0 12px;
     }
 
     h6 {
@@ -278,53 +338,9 @@ button {
       justify-content: space-between;
 
       .left-part {
-        width: 61%;
-
-        .responsibilities-challenges-block {
-
-          .responsibilities, .challenges {
-
-            h4 {
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 36px;
-              color: #D57A66;
-              margin: 0 0 16px;
-            }
-
-            .block-item {
-              display: flex;
-              align-items: flex-start;
-              margin-bottom: 16px;
-
-              &:last-child {
-                margin-bottom: 0;
-              }
-
-              span {
-                font-size: 20px;
-                display: inline-block;
-                margin-left: 16px;
-                line-height: 32px;
-              }
-            }
-          }
-
-          .responsibilities {
-            margin-bottom: 48px;
-          }
-        }
-      }
-
-      .right-part {
-        width: 35%;
+        width: 28%;
 
         .info-block {
-          padding: 48px;
-          border: 2px solid #D57A66;
-          border-right: 6px solid #D57A66;
-          border-bottom: 6px solid #D57A66;
-          border-radius: 48px;
 
           .item {
             margin-bottom: 24px;
@@ -356,6 +372,10 @@ button {
           }
         }
       }
+
+      .right-part {
+        width: 68%;
+      }
     }
   }
 
@@ -379,14 +399,66 @@ button {
     }
   }
 
-  .result {
-    padding-bottom: 52px;
+  .mobile-app, .wep-app {
+    padding: 76px 0;
 
-    h2 {
+    .subtitle {
+      margin-bottom: 48px;
+    }
+  }
+
+  .result {
+    padding-bottom: 76px;
+
+    h5 {
       font-size: 40px;
       font-weight: 700;
       line-height: 60px;
       margin: 0 0 48px;
+    }
+
+    .statistic {
+      display: flex;
+      border: 2px solid #D57A66;
+      padding: 48px;
+      border-radius: 24px;
+      margin-bottom: 48px;
+
+      .statistic-item {
+        width: 25%;
+        border-right: 2px solid #DBD1C5;
+        padding: 0 24px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+          border-right: none;
+        }
+
+        h4 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+          margin: 0 0 8px;
+          color: #D57A66;
+        }
+
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+
+    .challenges-and-results {
+      display: flex;
+      justify-content: space-between;
+
+      .challenges, .results {
+        width: 48%;
+      }
     }
   }
 
@@ -429,3 +501,53 @@ button {
     }
   }
 }
+
+.halfed {
+  width: 48%;
+}
+
+.phone-block {
+  border: 8px solid #0E1919;
+  border-radius: 16px;
+  width: 254px;
+  height: 546px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.desktop-block {
+  border: 8px solid #0E1919;
+  border-radius: 16px;
+  width: 762px;
+  height: 546px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.desktop-block-with-two-screens {
+  position: relative;
+  overflow: hidden;
+
+  .first-screen, .second-screen {
+    border: 8px solid #0E1919;
+    border-radius: 16px;
+    width: 762px;
+    height: 546px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .first-screen {
+    margin-left: -140px;
+  }
+
+  .second-screen {
+    margin-right: -140px;
+  }
+}
+

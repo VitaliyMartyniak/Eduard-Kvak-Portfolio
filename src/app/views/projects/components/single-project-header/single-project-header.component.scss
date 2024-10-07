@@ -1,0 +1,40 @@
+.wrapper {
+  height: 72px;
+
+  .sticky-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    z-index: 100;
+    background-color: #040F0F;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-left: 5%;
+      padding: 0;
+
+      img:after {
+        display: none !important;
+      }
+
+      &.next-button {
+        margin-right: 5%;
+        margin-left: 0;
+        color: #DBD1C5;
+
+        img {
+          margin-right: 0;
+          margin-left: 8px;
+        }
+
+        span::after {
+          background-color: #DBD1C5;
+        }
+      }
+    }
+  }
+}

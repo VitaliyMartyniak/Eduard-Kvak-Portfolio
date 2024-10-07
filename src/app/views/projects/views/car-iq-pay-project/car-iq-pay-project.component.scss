@@ -1,0 +1,62 @@
+.car-iq-pay-1st-screen {
+  height: 788px;
+  background-image: url("/assets/images/car-iq-pay-1st-screen.png");
+}
+
+.car-iq-pay-2nd-screen {
+  height: 546px;
+  background-image: url("/assets/images/car-iq-pay-2nd-screen.png");
+}
+
+.car-iq-pay-3rd-screen {
+  height: 650px;
+  background-image: url("/assets/images/car-iq-pay-3rd-screen.png");
+}
+
+.working-process-image {
+  background-image: url("/assets/images/car-iq-pay-working-scheme.png");
+}
+
+.mobile-app-screens-wrapper {
+  margin-bottom: 48px;
+
+  .phone-block {
+    margin: 0 48px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .set-vehicle {
+    background-image: url("/assets/images/set-vehicle.png");
+  }
+
+  .station-map {
+    background-image: url("/assets/images/station-map.png");
+  }
+
+  .purchase-history {
+    background-image: url("/assets/images/purchase-history.png");
+  }
+}
+
+.web-app-screens-wrapper {
+  margin-bottom: 48px;
+
+  .desktop-block, .phone-block {
+    margin: 0;
+  }
+
+  .phone-block {
+    margin-left: 48px;
+  }
+
+  .desktop-billing {
+    background-image: url("/assets/images/desktop-billing.png");
+  }
+
+  .phone-billing {
+    background-image: url("/assets/images/phone-billing.png");
+  }
+}
