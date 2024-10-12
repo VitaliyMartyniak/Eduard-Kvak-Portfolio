@@ -3,17 +3,23 @@
   position: relative; /* Necessary for fill-mode images */
 }
 
-.carousel-track {
+.carousel-track-left {
   display: flex;
-  animation: scroll linear infinite;
-  animation-duration: 15s; /* Adjust the duration for smooth scrolling */
+  animation: scroll-left linear infinite;
+  animation-duration: 25s; /* Adjust the duration for smooth scrolling */
+}
+
+.carousel-track-right {
+  display: flex;
+  animation: scroll-right linear infinite;
+  animation-duration: 25s; /* Adjust the duration for smooth scrolling */
 }
 
 .carousel-item {
   min-height: 412px;
   min-width: 676px;
-  margin-right: 48px; /* Space between images */
-  position: relative; /* Necessary for fill-mode images */
+  margin-right: 48px;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,12 +27,30 @@
   border-radius: 16px;
 }
 
-/* Keyframe animation for smooth scrolling */
-@keyframes scroll {
+@keyframes scroll-left {
   from {
     transform: translateX(0);
   }
+
+  50% {
+    transform: translateX(-2600px);
+  }
+
   to {
-    transform: translateX(-100%);
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-2600px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-2600px);
   }
 }

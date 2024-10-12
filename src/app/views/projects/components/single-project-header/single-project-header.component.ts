@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,4 +11,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './single-project-header.component.scss'
 })
 export class SingleProjectHeaderComponent {
+  @Input() nextProjectLink = '';
 }

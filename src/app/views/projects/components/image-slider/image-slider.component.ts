@@ -14,10 +14,11 @@ import { NgForOf, NgOptimizedImage, NgStyle } from '@angular/common';
 })
 export class ImageSliderComponent implements OnInit{
   @Input() photos: string[] = [];
+  @Input() direction: 'left' | 'right' = 'left';
   visiblePhotos: string[] = [];
 
   ngOnInit(): void {
-    this.visiblePhotos = [...this.photos, ...this.photos];
+    this.visiblePhotos = [...this.photos];
   }
 
   getBackgroundImageUrl(name: string) {

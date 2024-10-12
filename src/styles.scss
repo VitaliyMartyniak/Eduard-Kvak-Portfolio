@@ -327,7 +327,7 @@ button {
   }
 
   .overview {
-    padding-bottom: 76px;
+    padding: 76px 0;
 
     h5 {
       margin-bottom: 48px;
@@ -408,7 +408,7 @@ button {
   }
 
   .result {
-    padding-bottom: 76px;
+    padding: 76px 0;
 
     h5 {
       font-size: 40px;
@@ -463,6 +463,7 @@ button {
   }
 
   .working-process {
+    margin-top: 48px;
     margin-bottom: 96px;
 
     p {
@@ -506,6 +507,43 @@ button {
   width: 48%;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.toggle-container {
+  display: inline-block;
+  margin: 0 auto 48px;
+  border: 2px solid #D57A66;
+  padding: 2px;
+  border-radius: 12px;
+
+  button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+
+    &.active {
+      background-color: #D57A66;
+    }
+
+    &:hover {
+      border-radius: 8px;
+    }
+  }
+}
+
 .phone-block {
   border: 8px solid #0E1919;
   border-radius: 16px;
@@ -529,6 +567,7 @@ button {
 }
 
 .desktop-block-with-two-screens {
+  display: flex;
   position: relative;
   overflow: hidden;
 
@@ -536,6 +575,7 @@ button {
     border: 8px solid #0E1919;
     border-radius: 16px;
     width: 762px;
+    min-width: 762px;
     height: 546px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -543,11 +583,7 @@ button {
   }
 
   .first-screen {
-    margin-left: -140px;
-  }
-
-  .second-screen {
-    margin-right: -140px;
+    margin-right: 48px;
   }
 }
 

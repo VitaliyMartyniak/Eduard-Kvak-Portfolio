@@ -36,6 +36,8 @@ import { ImageSliderComponent } from '../../components/image-slider/image-slider
 export class CarIqPayProjectComponent {
   passwordPassed = false;
 
+  selectedOption: string = 'directPay';
+
   industries = ['Automotive', 'FinTech'];
 
   workingProcessList = [
@@ -86,13 +88,19 @@ export class CarIqPayProjectComponent {
   appleCarPlayImages = [
     'apple-car-play-screen-1',
     'apple-car-play-screen-2',
-    'apple-car-play-screen-3'
+    'apple-car-play-screen-3',
+    'apple-car-play-screen-4',
+    'apple-car-play-screen-5',
+    'apple-car-play-screen-6'
   ]
 
   googleCarPlayImages = [
     'google-car-play-screen-1',
     'google-car-play-screen-2',
-    'google-car-play-screen-3'
+    'google-car-play-screen-3',
+    'google-car-play-screen-4',
+    'google-car-play-screen-5',
+    'google-car-play-screen-6'
   ]
 
   responsibilities = [
@@ -131,6 +139,10 @@ export class CarIqPayProjectComponent {
         item.opened = !item.opened;
       }
     })
+  }
+
+  setOption(option: string) {
+    this.selectedOption = option;
   }
 }
 

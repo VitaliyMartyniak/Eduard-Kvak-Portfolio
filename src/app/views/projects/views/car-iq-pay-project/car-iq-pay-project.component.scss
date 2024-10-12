@@ -13,6 +13,11 @@
   background-image: url("/assets/images/car-iq-pay-3rd-screen.png");
 }
 
+.car-iq-pay-4th-screen {
+  height: 788px;
+  background-image: url("/assets/images/car-iq-pay-4th-screen.png");
+}
+
 .working-process-image {
   background-image: url("/assets/images/car-iq-pay-working-scheme.png");
 }
@@ -41,22 +46,47 @@
   }
 }
 
-.web-app-screens-wrapper {
-  margin-bottom: 48px;
+.car-play-and-android-auto {
+  padding: 76px 0;
 
-  .desktop-block, .phone-block {
-    margin: 0;
+  .subtitle {
+    margin-bottom: 48px;
   }
 
-  .phone-block {
-    margin-left: 48px;
+  .apple-car-play-slider {
+    margin-bottom: 48px;
+    padding-top: 48px;
+  }
+}
+
+.web-app {
+  padding: 76px 0;
+
+  .subtitle {
+    margin-bottom: 48px;
   }
 
-  .desktop-billing {
-    background-image: url("/assets/images/desktop-billing.png");
-  }
+  .web-app-screens-wrapper {
+    margin-bottom: 48px;
 
-  .phone-billing {
-    background-image: url("/assets/images/phone-billing.png");
+    .desktop-block, .phone-block {
+      margin: 0;
+    }
+
+    .phone-block {
+      margin-left: 48px;
+    }
+
+    .desktop-billing {
+      background-image: url("/assets/images/desktop-billing.png");
+    }
+
+    .phone-billing {
+      background-image: url("/assets/images/phone-billing.png");
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
