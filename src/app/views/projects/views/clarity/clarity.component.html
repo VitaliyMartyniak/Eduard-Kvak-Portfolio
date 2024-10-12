@@ -1,0 +1,233 @@
+<header>
+  <app-single-project-header nextProjectLink="factually-health"></app-single-project-header>
+</header>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="main-info">
+      <h4>Clarity</h4>
+
+      <h2>Q&A platform & e-Book reader</h2>
+
+      <p>
+        Solutions for tech people to share the content (threads, videos, articles) and read
+        the e-book collections. The product aims to deliver innovative and user-friendly web
+        solutions that meet the high standards of tech-savvy users, enabling seamless interaction and content accessibility.
+      </p>
+
+      <div class="industries-and-project-links">
+        <div class="industries">
+          <div class="industry" *ngFor="let industry of industries">
+            #{{industry}}
+          </div>
+        </div>
+
+        <div class="project-links">
+          <a href="https://www.cariqpay.com" target="_blank">
+            <img src="assets/images/link-icon.svg">
+            <span>Visit website</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="clarity-1st-screen background-image"></div>
+</div>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="overview">
+      <h5>Overview</h5>
+
+      <div class="parts-wrapper">
+
+        <div class="left-part">
+          <div class="info-block">
+            <div class="item">
+              <p>Role</p>
+              <span>Product designer</span>
+            </div>
+            <div class="item">
+              <p>Methodology</p>
+              <span>Agile</span>
+            </div>
+            <div class="item">
+              <p>Project type</p>
+              <span>B2C</span>
+            </div>
+            <div class="item">
+              <p>Duration</p>
+              <span>3 months</span>
+            </div>
+            <div class="item">
+              <p>Team</p>
+              <span>1 designer<br/>1 business analytic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-part">
+          <app-list title="Responsibilities" [items]="responsibilities" icon="dot"></app-list>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="qa-platform">
+      <h5>Q&A platform</h5>
+      <p class="subtitle">A platform enables users to create threads, write articles,
+        upload videos, and receive relevant answers or comments, fostering a dynamic and collaborative community.</p>
+
+      <div class="participate-threads">
+        <app-preview-block
+          title="Participate and create threads!"
+          backgroundImage="qa-platform-1st-background"
+          deviceImage="participate-threads-1"
+          deviceSecondImage="participate-threads-2"
+          [desktop]="true"
+          [screensNumber]="2"
+        >
+        </app-preview-block>
+      </div>
+
+      <app-preview-block
+        title="Place bounty, get rewards for the answers and become an administrator!"
+        backgroundImage="qa-platform-2nd-background"
+        deviceImage="place-bounty"
+        [desktop]="true"
+      >
+      </app-preview-block>
+
+      <div class="read-and-publish-articles">
+        <app-preview-block
+          title="Read and publish articles!"
+          backgroundImage="qa-platform-3rd-background"
+          deviceImage="read-and-publish-articles-1"
+          deviceSecondImage="read-and-publish-articles-2"
+          [desktop]="true"
+          [screensNumber]="2"
+        >
+        </app-preview-block>
+      </div>
+
+      <app-preview-block
+        title="Search by specific topic, publisher, or parameter!"
+        backgroundImage="qa-platform-4th-background"
+        deviceImage="search-by"
+        [desktop]="true"
+      >
+      </app-preview-block>
+
+      <div class="watch-videos">
+        <app-preview-block
+          title="Watch and upload videos!"
+          backgroundImage="qa-platform-5th-background"
+          deviceImage="watch-videos-1"
+          deviceSecondImage="watch-videos-2"
+          [desktop]="true"
+          [screensNumber]="2"
+        >
+        </app-preview-block>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="ebook-reader">
+      <h5>e-Book reader</h5>
+      <p class="subtitle">Offers a seamless digital reading experience with support
+        for various e-book formats, allowing users to access and enjoy a diverse library of content.</p>
+
+      <div class="find-information">
+        <app-preview-block
+          title="Read e-books and quickly find needed information!"
+          backgroundImage="ebook-reader-1st-background"
+          deviceImage="find-information-1"
+          deviceSecondImage="find-information-2"
+          [desktop]="true"
+          [screensNumber]="2"
+        >
+        </app-preview-block>
+      </div>
+
+      <div class="flex-row space-between">
+        <app-preview-block
+          class="halfed"
+          title="Easily navigate through chapters!"
+          backgroundImage="ebook-reader-2nd-background"
+          deviceImage="easily-navigate"
+          [tablet]="true"
+        >
+        </app-preview-block>
+
+        <app-preview-block
+          class="halfed"
+          title="Make notes for yourself!"
+          backgroundImage="ebook-reader-3rd-background"
+          deviceImage="make-notes"
+          [phone]="true"
+        >
+        </app-preview-block>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper lighten fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="result">
+      <h5>Key challenges & Results</h5>
+
+      <div class="challenges-and-results">
+        <app-list class="challenges" title="Challenges" [items]="challenges" icon="next-icon-orange"></app-list>
+        <app-list class="results" title="Results" [items]="results" icon="check-orange"></app-list>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="content-wrapper">
+    <div class="working-process">
+      <h5>Working process</h5>
+
+      <p>Explore the various stages below to gain insight into the approach and methodologies.</p>
+
+      <div class="working-process-wrapper">
+        <div class="working-process-list">
+          <app-expandable-section
+            *ngFor="let item of workingProcessList; index as i"
+            [title]="item.title"
+            [isExpanded]="item.opened"
+            [showBottomLine]="i !== workingProcessList.length - 1"
+            (toggle)="toggleSection(item.id)"
+          >
+            <span [innerHTML]="item.content"></span>
+          </app-expandable-section>
+        </div>
+
+        <div class="working-process-image"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-wrapper fade-animation" appScrollMonitor>
+  <div class="clarity-2nd-screen background-image"></div>
+</div>
+
+<footer class="project-wrapper">
+  <div class="content-wrapper">
+    <app-single-project-footer></app-single-project-footer>
+  </div>
+</footer>
+

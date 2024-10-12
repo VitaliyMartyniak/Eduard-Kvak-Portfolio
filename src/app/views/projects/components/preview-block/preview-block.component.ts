@@ -20,6 +20,7 @@ export class PreviewBlockComponent {
   @Input() custom = false;
   @Input() phone = false;
   @Input() desktop = false;
+  @Input() tablet = false;
   @Input() screensNumber = 1;
   @Input() height = 726;
 

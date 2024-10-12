@@ -417,6 +417,12 @@ button {
       margin: 0 0 48px;
     }
 
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+    }
+
     .statistic {
       display: flex;
       border: 2px solid #D57A66;
@@ -548,6 +554,17 @@ video {
   border: 8px solid #0E1919;
   border-radius: 16px;
   width: 254px;
+  height: 546px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.tablet-block {
+  border: 8px solid #0E1919;
+  border-radius: 16px;
+  width: 386px;
   height: 546px;
   background-size: cover;
   background-repeat: no-repeat;

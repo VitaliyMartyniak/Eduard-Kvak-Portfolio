@@ -8,7 +8,22 @@
     <div
       class="phone-block"
       [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"
-    ></div>
+    >
+      <video *ngIf="deviceVideo" autoplay [muted]="'muted'" loop>
+        <source src="assets/videos/{{deviceVideo}}.mov" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div *ngIf="tablet">
+    <div
+      class="tablet-block"
+      [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"
+    >
+      <video *ngIf="deviceVideo" autoplay [muted]="'muted'" loop>
+        <source src="assets/videos/{{deviceVideo}}.mov" type="video/mp4">
+      </video>
+    </div>
   </div>
 
   <div *ngIf="desktop && screensNumber === 1">
@@ -16,7 +31,7 @@
       class="desktop-block"
       [ngStyle]="{'background-image': deviceImage ? getBackgroundImageUrl(deviceImage) : ''}"
     >
-      <video *ngIf="deviceVideo" autoplay muted loop>
+      <video *ngIf="deviceVideo" autoplay [muted]="'muted'" loop>
         <source src="assets/videos/{{deviceVideo}}.mov" type="video/mp4">
       </video>
     </div>

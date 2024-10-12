@@ -133,11 +133,11 @@
           </div>
 
           <div class="phone-block">
-            <video *ngIf="selectedOption === 'directPay'" autoplay muted loop>
+            <video *ngIf="selectedOption === 'directPay'" autoplay [muted]="'muted'" loop>
               <source src="assets/videos/direct-pay.mov" type="video/mp4" />
             </video>
 
-            <video *ngIf="selectedOption === 'appleGooglePay'" autoplay muted loop>
+            <video *ngIf="selectedOption === 'appleGooglePay'" autoplay [muted]="'muted'" loop>
               <source src="assets/videos/apple-google-pay.mov" type="video/mp4" />
             </video>
           </div>
