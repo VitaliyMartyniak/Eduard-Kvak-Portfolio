@@ -144,5 +144,9 @@ export class CarIqPayProjectComponent {
   setOption(option: string) {
     this.selectedOption = option;
   }
+
+  showProject() {
+    this.passwordPassed = true;
+  }
 }
 

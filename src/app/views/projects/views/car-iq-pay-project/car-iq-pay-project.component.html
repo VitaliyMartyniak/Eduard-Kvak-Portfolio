@@ -1,296 +1,301 @@
-<header>
-  <app-single-project-header nextProjectLink="clarity"></app-single-project-header>
-</header>
+<app-password-check *ngIf="!passwordPassed" (passwordChecked)="showProject()"></app-password-check>
 
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="main-info">
-      <h4>Car IQ Pay</h4>
+<ng-container *ngIf="passwordPassed">
+  <header>
+    <app-single-project-header nextProjectLink="clarity"></app-single-project-header>
+  </header>
 
-      <h2>Payment platform for fleets</h2>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="main-info">
+        <h4>Car IQ Pay</h4>
 
-      <p>
-        Payment platform that enables vehicles to directly initiate, validate, and complete secure
-        transactions without credit cards. By integrating with existing tech stacks and using telematics,
-        it offers detailed insights to fleets, reducing fraud and simplifying expense management with a
-        consolidated transaction ledger. Merchants benefit from better customer understanding and targeted,
-        location-based marketing opportunities.
-      </p>
+        <h2>Payment platform for fleets</h2>
 
-      <div class="industries-and-project-links">
-        <div class="industries">
-          <div class="industry" *ngFor="let industry of industries">
-            #{{industry}}
-          </div>
-        </div>
+        <p>
+          Payment platform that enables vehicles to directly initiate, validate, and complete secure
+          transactions without credit cards. By integrating with existing tech stacks and using telematics,
+          it offers detailed insights to fleets, reducing fraud and simplifying expense management with a
+          consolidated transaction ledger. Merchants benefit from better customer understanding and targeted,
+          location-based marketing opportunities.
+        </p>
 
-        <div class="project-links">
-          <a href="https://www.cariqpay.com" target="_blank">
-            <img src="assets/images/link-icon.svg">
-            <span>Visit website</span>
-          </a>
-          <a href="https://apps.apple.com/us/app/car-iq-pay/id1584632482" target="_blank">
-            <img src="assets/images/link-icon.svg">
-            <span>View in App Store</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="car-iq-pay-1st-screen background-image"></div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="overview">
-      <h5>Overview</h5>
-
-      <div class="parts-wrapper">
-
-        <div class="left-part">
-          <div class="info-block">
-            <div class="item">
-              <p>Role</p>
-              <span>Lead product designer</span>
-            </div>
-            <div class="item">
-              <p>Methodology</p>
-              <span>Agile</span>
-            </div>
-            <div class="item">
-              <p>Project type</p>
-              <span>B2B & B2C</span>
-            </div>
-            <div class="item">
-              <p>Team</p>
-              <span>2 designers<br/>2 product managers<br/>2 front-end developers</span>
+        <div class="industries-and-project-links">
+          <div class="industries">
+            <div class="industry" *ngFor="let industry of industries">
+              #{{industry}}
             </div>
           </div>
-        </div>
 
-        <div class="right-part">
-          <app-list title="Responsibilities" [items]="responsibilities" icon="dot"></app-list>
+          <div class="project-links">
+            <a href="https://www.cariqpay.com" target="_blank">
+              <img src="assets/images/link-icon.svg">
+              <span>Visit website</span>
+            </a>
+            <a href="https://apps.apple.com/us/app/car-iq-pay/id1584632482" target="_blank">
+              <img src="assets/images/link-icon.svg">
+              <span>View in App Store</span>
+            </a>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="mobile-app">
-      <h5>Mobile app</h5>
-      <p class="subtitle">A cardless payment solution designed for fleet drivers, enabling seamless transactions for services.
-        The app leverages vehicle data to streamline interactions with merchants, offering a hassle-free,
-        efficient payment experience that enhances the driver’s journey.</p>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="car-iq-pay-1st-screen background-image"></div>
+  </div>
 
-      <div class="mobile-app-screens-wrapper">
-        <app-preview-block
-          title="Select your vehicle, choose the service, and make purchases!"
-          backgroundImage="mobile-app-1st-background"
-          [custom]="true"
-        >
-          <div class="flex-row centered-hor">
-            <div class="phone-block set-vehicle"></div>
-            <div class="phone-block station-map"></div>
-            <div class="phone-block purchase-history"></div>
-          </div>
-        </app-preview-block>
-      </div>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="overview">
+        <h5>Overview</h5>
 
-      <div class="flex-row space-between">
-        <app-preview-block
-          class="halfed"
-          title="Search, sort, filter and explore your favourite merchants!"
-          backgroundImage="mobile-app-2nd-background"
-          deviceImage="fueling-parameters"
-          [phone]="true"
-        >
-        </app-preview-block>
+        <div class="parts-wrapper">
 
-        <app-preview-block
-          class="halfed"
-          title="Multiple payment options!"
-          backgroundImage="mobile-app-3rd-background"
-          [custom]="true"
-        >
-          <div class="toggle-container flex-row centered-hor">
-            <button
-              [class.active]="selectedOption === 'directPay'"
-              (click)="setOption('directPay')">
-              Direct Pay
-            </button>
-
-            <button
-              [class.active]="selectedOption === 'appleGooglePay'"
-              (click)="setOption('appleGooglePay')">
-              Apple/Google Pay
-            </button>
+          <div class="left-part">
+            <div class="info-block">
+              <div class="item">
+                <p>Role</p>
+                <span>Lead product designer</span>
+              </div>
+              <div class="item">
+                <p>Methodology</p>
+                <span>Agile</span>
+              </div>
+              <div class="item">
+                <p>Project type</p>
+                <span>B2B & B2C</span>
+              </div>
+              <div class="item">
+                <p>Team</p>
+                <span>2 designers<br/>2 product managers<br/>2 front-end developers</span>
+              </div>
+            </div>
           </div>
 
-          <div class="phone-block">
-            <video *ngIf="selectedOption === 'directPay'" autoplay [muted]="'muted'" loop>
-              <source src="assets/videos/direct-pay.mov" type="video/mp4" />
-            </video>
-
-            <video *ngIf="selectedOption === 'appleGooglePay'" autoplay [muted]="'muted'" loop>
-              <source src="assets/videos/apple-google-pay.mov" type="video/mp4" />
-            </video>
+          <div class="right-part">
+            <app-list title="Responsibilities" [items]="responsibilities" icon="dot"></app-list>
           </div>
-        </app-preview-block>
+
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="car-play-and-android-auto">
-      <h5>CarPlay & Android Auto</h5>
-      <p class="subtitle">A mobile app extension that allows fleet drivers to safely complete transactions
-        directly through the vehicle using Apple CarPlay or Android Auto.</p>
+  <div class="project-wrapper lighten fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="mobile-app">
+        <h5>Mobile app</h5>
+        <p class="subtitle">A cardless payment solution designed for fleet drivers, enabling seamless transactions for services.
+          The app leverages vehicle data to streamline interactions with merchants, offering a hassle-free,
+          efficient payment experience that enhances the driver’s journey.</p>
 
-      <div class="car-play-and-android-auto-wrapper">
-        <app-preview-block
-          backgroundImage="car-play-1st-background"
-          [height]="968"
-          [custom]="true"
-        >
-          <div class="apple-car-play-slider">
-            <app-image-slider [photos]="appleCarPlayImages" direction="left"></app-image-slider>
-          </div>
-
-          <div class="google-car-play-slider">
-            <app-image-slider [photos]="googleCarPlayImages" direction="right"></app-image-slider>
-          </div>
-        </app-preview-block>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="web-app">
-      <h5>Web app</h5>
-      <p class="subtitle">A platform for managing fleet services, enabling effortless setup, monitoring,
-        and payment for a variety of operations. The web app simplifies fleet administration by providing
-        clear, actionable insights and greater control over fleet activities.</p>
-
-      <div class="web-app-screens-wrapper">
-        <app-preview-block
-          title="Get insights about the fleet, manage drivers and vehicles!"
-          backgroundImage="web-app-1st-background"
-          deviceVideo="car-iq-pay-web-video"
-          [desktop]="true"
-        >
-        </app-preview-block>
-      </div>
-
-      <div class="web-app-screens-wrapper">
-        <app-preview-block
-          title="Create vehicle groups, set up payment rules, and track spending!"
-          backgroundImage="web-app-2nd-background"
-          deviceImage="vehicle-groups"
-          deviceSecondImage="purchase-rules"
-          [desktop]="true"
-          [screensNumber]="2"
-        >
-        </app-preview-block>
-      </div>
-
-      <div class="web-app-screens-wrapper">
-        <app-preview-block
-          title="Review and pay company bills!"
-          backgroundImage="web-app-3rd-background"
-          [custom]="true"
-        >
-          <div class="flex-row centered-hor">
-            <div class="desktop-block desktop-billing"></div>
-            <div class="phone-block phone-billing"></div>
-          </div>
-        </app-preview-block>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="result">
-      <h5>Key challenges & Results</h5>
-
-      <div class="statistic">
-        <div class="statistic-item">
-          <h4>System usability scale</h4>
-          <h2>
-            82.8%
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>Task completion rate</h4>
-          <h2>
-            93.6%
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>Time on task</h4>
-          <h2>
-            ~3 min
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>Error rate</h4>
-          <h2>
-            4.3%
-          </h2>
-        </div>
-      </div>
-
-      <div class="challenges-and-results">
-        <app-list class="challenges" title="Challenges" [items]="challenges" icon="next-icon-orange"></app-list>
-        <app-list class="results" title="Results" [items]="results" icon="check-orange"></app-list>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="working-process">
-      <h5>Working process</h5>
-
-      <p>Explore the various stages below to gain insight into the approach and methodologies.</p>
-
-      <div class="working-process-wrapper">
-        <div class="working-process-list">
-          <app-expandable-section
-            *ngFor="let item of workingProcessList; index as i"
-            [title]="item.title"
-            [isExpanded]="item.opened"
-            [showBottomLine]="i !== workingProcessList.length - 1"
-            (toggle)="toggleSection(item.id)"
+        <div class="mobile-app-screens-wrapper">
+          <app-preview-block
+            title="Select your vehicle, choose the service, and make purchases!"
+            backgroundImage="mobile-app-1st-background"
+            [custom]="true"
           >
-            <span [innerHTML]="item.content"></span>
-          </app-expandable-section>
+            <div class="flex-row centered-hor">
+              <div class="phone-block set-vehicle"></div>
+              <div class="phone-block station-map"></div>
+              <div class="phone-block purchase-history"></div>
+            </div>
+          </app-preview-block>
         </div>
 
-        <div class="working-process-image"></div>
+        <div class="flex-row space-between">
+          <app-preview-block
+            class="halfed"
+            title="Search, sort, filter and explore your favourite merchants!"
+            backgroundImage="mobile-app-2nd-background"
+            deviceImage="fueling-parameters"
+            [phone]="true"
+          >
+          </app-preview-block>
+
+          <app-preview-block
+            class="halfed"
+            title="Multiple payment options!"
+            backgroundImage="mobile-app-3rd-background"
+            [custom]="true"
+          >
+            <div class="toggle-container flex-row centered-hor">
+              <button
+                [class.active]="selectedOption === 'directPay'"
+                (click)="setOption('directPay')">
+                Direct Pay
+              </button>
+
+              <button
+                [class.active]="selectedOption === 'appleGooglePay'"
+                (click)="setOption('appleGooglePay')">
+                Apple/Google Pay
+              </button>
+            </div>
+
+            <div class="phone-block">
+              <video *ngIf="selectedOption === 'directPay'" autoplay [muted]="'muted'" loop>
+                <source src="assets/videos/direct-pay.mov" type="video/mp4" />
+              </video>
+
+              <video *ngIf="selectedOption === 'appleGooglePay'" autoplay [muted]="'muted'" loop>
+                <source src="assets/videos/apple-google-pay.mov" type="video/mp4" />
+              </video>
+            </div>
+          </app-preview-block>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="car-iq-pay-4th-screen background-image"></div>
-</div>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="car-play-and-android-auto">
+        <h5>CarPlay & Android Auto</h5>
+        <p class="subtitle">A mobile app extension that allows fleet drivers to safely complete transactions
+          directly through the vehicle using Apple CarPlay or Android Auto.</p>
 
-<footer class="project-wrapper">
-  <div class="content-wrapper">
-    <app-single-project-footer></app-single-project-footer>
+        <div class="car-play-and-android-auto-wrapper">
+          <app-preview-block
+            backgroundImage="car-play-1st-background"
+            [height]="968"
+            [custom]="true"
+          >
+            <div class="apple-car-play-slider">
+              <app-image-slider [photos]="appleCarPlayImages" direction="left"></app-image-slider>
+            </div>
+
+            <div class="google-car-play-slider">
+              <app-image-slider [photos]="googleCarPlayImages" direction="right"></app-image-slider>
+            </div>
+          </app-preview-block>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+
+  <div class="project-wrapper lighten fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="web-app">
+        <h5>Web app</h5>
+        <p class="subtitle">A platform for managing fleet services, enabling effortless setup, monitoring,
+          and payment for a variety of operations. The web app simplifies fleet administration by providing
+          clear, actionable insights and greater control over fleet activities.</p>
+
+        <div class="web-app-screens-wrapper">
+          <app-preview-block
+            title="Get insights about the fleet, manage drivers and vehicles!"
+            backgroundImage="web-app-1st-background"
+            deviceVideo="car-iq-pay-web-video"
+            [desktop]="true"
+          >
+          </app-preview-block>
+        </div>
+
+        <div class="web-app-screens-wrapper">
+          <app-preview-block
+            title="Create vehicle groups, set up payment rules, and track spending!"
+            backgroundImage="web-app-2nd-background"
+            deviceImage="vehicle-groups"
+            deviceSecondImage="purchase-rules"
+            [desktop]="true"
+            [screensNumber]="2"
+          >
+          </app-preview-block>
+        </div>
+
+        <div class="web-app-screens-wrapper">
+          <app-preview-block
+            title="Review and pay company bills!"
+            backgroundImage="web-app-3rd-background"
+            [custom]="true"
+          >
+            <div class="flex-row centered-hor">
+              <div class="desktop-block desktop-billing"></div>
+              <div class="phone-block phone-billing"></div>
+            </div>
+          </app-preview-block>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper lighten fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="result">
+        <h5>Key challenges & Results</h5>
+
+        <div class="statistic">
+          <div class="statistic-item">
+            <h4>System usability scale</h4>
+            <h2>
+              82.8%
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>Task completion rate</h4>
+            <h2>
+              93.6%
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>Time on task</h4>
+            <h2>
+              ~3 min
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>Error rate</h4>
+            <h2>
+              4.3%
+            </h2>
+          </div>
+        </div>
+
+        <div class="challenges-and-results">
+          <app-list class="challenges" title="Challenges" [items]="challenges" icon="next-icon-orange"></app-list>
+          <app-list class="results" title="Results" [items]="results" icon="check-orange"></app-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="working-process">
+        <h5>Working process</h5>
+
+        <p>Explore the various stages below to gain insight into the approach and methodologies.</p>
+
+        <div class="working-process-wrapper">
+          <div class="working-process-list">
+            <app-expandable-section
+              *ngFor="let item of workingProcessList; index as i"
+              [title]="item.title"
+              [isExpanded]="item.opened"
+              [showBottomLine]="i !== workingProcessList.length - 1"
+              (toggle)="toggleSection(item.id)"
+            >
+              <span [innerHTML]="item.content"></span>
+            </app-expandable-section>
+          </div>
+
+          <div class="working-process-image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="car-iq-pay-4th-screen background-image"></div>
+  </div>
+
+  <footer class="project-wrapper">
+    <div class="content-wrapper">
+      <app-single-project-footer></app-single-project-footer>
+    </div>
+  </footer>
+</ng-container>
+

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ExpandableSectionComponent } from "../../../../components/expandable-section/expandable-section.component";
 import { ListComponent } from "../../components/list/list.component";
-import { NgForOf } from "@angular/common";
+import { NgForOf, NgIf } from "@angular/common";
 import { PreviewBlockComponent } from "../../components/preview-block/preview-block.component";
 import { ScrollMonitorDirective } from "../../../../directives/scroll-monitor.directive";
 import { SingleProjectFooterComponent } from "../../components/single-project-footer/single-project-footer.component";
 import { SingleProjectHeaderComponent } from "../../components/single-project-header/single-project-header.component";
+import { PasswordCheckComponent } from "../../components/password-check/password-check.component";
 
 @Component({
   selector: 'app-clarity',
@@ -17,7 +18,9 @@ import { SingleProjectHeaderComponent } from "../../components/single-project-he
         PreviewBlockComponent,
         ScrollMonitorDirective,
         SingleProjectFooterComponent,
-        SingleProjectHeaderComponent
+        SingleProjectHeaderComponent,
+        NgIf,
+        PasswordCheckComponent
     ],
   templateUrl: './clarity.component.html',
   styleUrl: './clarity.component.scss'
@@ -101,5 +104,9 @@ export class ClarityComponent {
         item.opened = !item.opened;
       }
     })
+  }
+
+  showProject() {
+    this.passwordPassed = true;
   }
 }

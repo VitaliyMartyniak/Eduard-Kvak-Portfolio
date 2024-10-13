@@ -1,259 +1,264 @@
-<header>
-  <app-single-project-header nextProjectLink="car-iq-pay"></app-single-project-header>
-</header>
+<app-password-check *ngIf="!passwordPassed" (passwordChecked)="showProject()"></app-password-check>
 
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="main-info">
-      <h4>Factually Health</h4>
+<ng-container *ngIf="passwordPassed">
+  <header>
+    <app-single-project-header nextProjectLink="car-iq-pay"></app-single-project-header>
+  </header>
 
-      <h2>AI-driven platform for companies and patients in the health industry</h2>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="main-info">
+        <h4>Factually Health</h4>
 
-      <p>
-        A solution for businesses and organizations, providing an effortless way to deliver
-        trusted health information to patients and customers. The platform offers two AI-powered
-        tools that seamlessly integrate into digital platforms, apps, or websites: an AI-Powered
-        Factual Search tool, and a Conversational HealthBot.
-      </p>
+        <h2>AI-driven platform for companies and patients in the health industry</h2>
 
-      <div class="industries-and-project-links">
-        <div class="industries">
-          <div class="industry" *ngFor="let industry of industries">
-            #{{industry}}
-          </div>
-        </div>
+        <p>
+          A solution for businesses and organizations, providing an effortless way to deliver
+          trusted health information to patients and customers. The platform offers two AI-powered
+          tools that seamlessly integrate into digital platforms, apps, or websites: an AI-Powered
+          Factual Search tool, and a Conversational HealthBot.
+        </p>
 
-        <div class="project-links">
-          <a href="https://factually-health.webflow.io" target="_blank">
-            <img src="assets/images/link-icon.svg">
-            <span>Visit website</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="factually-health-1st-screen background-image"></div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="overview">
-      <h5>Overview</h5>
-
-      <div class="parts-wrapper">
-
-        <div class="left-part">
-          <div class="info-block">
-            <div class="item">
-              <p>Role</p>
-              <span>Lead product designer</span>
-            </div>
-            <div class="item">
-              <p>Methodology</p>
-              <span>Hybrid (Agile + Waterfall)</span>
-            </div>
-            <div class="item">
-              <p>Project type</p>
-              <span>B2B & B2C</span>
-            </div>
-            <div class="item">
-              <p>Duration time</p>
-              <span>2 months</span>
-            </div>
-            <div class="item">
-              <p>Team</p>
-              <span>1 product designer<br/>1 project manager</span>
+        <div class="industries-and-project-links">
+          <div class="industries">
+            <div class="industry" *ngFor="let industry of industries">
+              #{{industry}}
             </div>
           </div>
-        </div>
 
-        <div class="right-part">
-          <app-list title="Responsibilities" [items]="responsibilities" icon="dot"></app-list>
+          <div class="project-links">
+            <a href="https://factually-health.webflow.io" target="_blank">
+              <img src="assets/images/link-icon.svg">
+              <span>Visit website</span>
+            </a>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="ai-powered-tool">
-      <h5>AI-Powered Factual Search tool</h5>
-      <p class="subtitle">Provides users with real-time, accurate search results for health-related
-        queries. The tool efficiently retrieves and presents relevant information and resources,
-        facilitating quick access to essential data.</p>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="factually-health-1st-screen background-image"></div>
+  </div>
 
-      <app-preview-block
-        title="Explore how to use the platform!"
-        backgroundImage="ai-powered-tool-1st-background"
-        deviceImage="explore-platform-1"
-        deviceSecondImage="explore-platform-2"
-        [desktop]="true"
-        [screensNumber]="2"
-      >
-      </app-preview-block>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="overview">
+        <h5>Overview</h5>
 
-      <div class="health-related-queries-wrapper">
+        <div class="parts-wrapper">
+
+          <div class="left-part">
+            <div class="info-block">
+              <div class="item">
+                <p>Role</p>
+                <span>Lead product designer</span>
+              </div>
+              <div class="item">
+                <p>Methodology</p>
+                <span>Hybrid (Agile + Waterfall)</span>
+              </div>
+              <div class="item">
+                <p>Project type</p>
+                <span>B2B & B2C</span>
+              </div>
+              <div class="item">
+                <p>Duration time</p>
+                <span>2 months</span>
+              </div>
+              <div class="item">
+                <p>Team</p>
+                <span>1 product designer<br/>1 project manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-part">
+            <app-list title="Responsibilities" [items]="responsibilities" icon="dot"></app-list>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper lighten fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="ai-powered-tool">
+        <h5>AI-Powered Factual Search tool</h5>
+        <p class="subtitle">Provides users with real-time, accurate search results for health-related
+          queries. The tool efficiently retrieves and presents relevant information and resources,
+          facilitating quick access to essential data.</p>
+
         <app-preview-block
-          title="Get the reliable information about any health-related queries!"
-          backgroundImage="ai-powered-tool-2nd-background"
-          deviceVideo="reliable-info"
+          title="Explore how to use the platform!"
+          backgroundImage="ai-powered-tool-1st-background"
+          deviceImage="explore-platform-1"
+          deviceSecondImage="explore-platform-2"
           [desktop]="true"
-        >
-        </app-preview-block>
-      </div>
-
-      <div class="flex-row space-between">
-        <app-preview-block
-          class="halfed"
-          title="Choose between short or advanced summaries!"
-          backgroundImage="ai-powered-tool-3rd-background"
-          deviceVideo="summaries"
-          [tablet]="true"
+          [screensNumber]="2"
         >
         </app-preview-block>
 
-        <app-preview-block
-          class="halfed"
-          title="Review related articles and videos!"
-          backgroundImage="ai-powered-tool-4th-background"
-          deviceImage="related-articles-and-videos"
-          [tablet]="true"
-        >
-        </app-preview-block>
-      </div>
-
-      <div class="rate-and-search-results">
-        <app-preview-block
-          title="Rate the search results and share them with others!"
-          backgroundImage="ai-powered-tool-5th-background"
-          deviceImage="rate-and-search-results"
-          [desktop]="true"
-        >
-        </app-preview-block>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="health-bot">
-      <h5>Conversational HealthBot</h5>
-      <p class="subtitle">Delivers immediate, precise answers to health-related
-        questions through an interactive chat interface. Enhances user engagement
-        by offering tailored responses and supporting dynamic, conversational interactions.</p>
-
-      <div class="health-bot-appearance-wrapper">
-        <app-preview-block
-          title="Define the HealthBot appearance!"
-          backgroundImage="health-bot-1st-background"
-          deviceVideo="healthbot-appearance"
-          [desktop]="true"
-        >
-        </app-preview-block>
-      </div>
-
-      <div class="flex-row space-between">
-        <app-preview-block
-          class="halfed"
-          title="Ask your questions in a suitable format!"
-          backgroundImage="health-bot-2nd-background"
-          deviceImage="factually-questions"
-          [tablet]="true"
-        >
-        </app-preview-block>
-
-        <app-preview-block
-          class="halfed"
-          title="Set up tone of voice!"
-          backgroundImage="health-bot-3rd-background"
-          deviceImage="factually-voice"
-          [tablet]="true"
-        >
-        </app-preview-block>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper lighten fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="result">
-      <h5>Key challenges & Results</h5>
-
-      <div class="statistic">
-        <div class="statistic-item">
-          <h4>User satisfaction rate</h4>
-          <h2>
-            86.8%
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>System usability scale</h4>
-          <h2>
-            78.5%
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>Task completion rate</h4>
-          <h2>
-            92.3%
-          </h2>
-        </div>
-        <div class="statistic-item">
-          <h4>Retention rate</h4>
-          <h2>
-            72.6%
-          </h2>
-        </div>
-      </div>
-
-      <div class="challenges-and-results">
-        <app-list class="challenges" title="Challenges" [items]="challenges" icon="next-icon-orange"></app-list>
-        <app-list class="results" title="Results" [items]="results" icon="check-orange"></app-list>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="content-wrapper">
-    <div class="working-process">
-      <h5>Working process</h5>
-
-      <p>Explore the various stages below to gain insight into the approach and methodologies.</p>
-
-      <div class="working-process-wrapper">
-        <div class="working-process-list">
-          <app-expandable-section
-            *ngFor="let item of workingProcessList; index as i"
-            [title]="item.title"
-            [isExpanded]="item.opened"
-            [showBottomLine]="i !== workingProcessList.length - 1"
-            (toggle)="toggleSection(item.id)"
+        <div class="health-related-queries-wrapper">
+          <app-preview-block
+            title="Get the reliable information about any health-related queries!"
+            backgroundImage="ai-powered-tool-2nd-background"
+            deviceVideo="reliable-info"
+            [desktop]="true"
           >
-            <span [innerHTML]="item.content"></span>
-          </app-expandable-section>
+          </app-preview-block>
         </div>
 
-        <div class="working-process-image"></div>
+        <div class="flex-row space-between">
+          <app-preview-block
+            class="halfed"
+            title="Choose between short or advanced summaries!"
+            backgroundImage="ai-powered-tool-3rd-background"
+            deviceVideo="summaries"
+            [tablet]="true"
+          >
+          </app-preview-block>
+
+          <app-preview-block
+            class="halfed"
+            title="Review related articles and videos!"
+            backgroundImage="ai-powered-tool-4th-background"
+            deviceImage="related-articles-and-videos"
+            [tablet]="true"
+          >
+          </app-preview-block>
+        </div>
+
+        <div class="rate-and-search-results">
+          <app-preview-block
+            title="Rate the search results and share them with others!"
+            backgroundImage="ai-powered-tool-5th-background"
+            deviceImage="rate-and-search-results"
+            [desktop]="true"
+          >
+          </app-preview-block>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-wrapper fade-animation" appScrollMonitor>
-  <div class="factually-health-2nd-screen background-image"></div>
-</div>
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="health-bot">
+        <h5>Conversational HealthBot</h5>
+        <p class="subtitle">Delivers immediate, precise answers to health-related
+          questions through an interactive chat interface. Enhances user engagement
+          by offering tailored responses and supporting dynamic, conversational interactions.</p>
 
-<footer class="project-wrapper">
-  <div class="content-wrapper">
-    <app-single-project-footer></app-single-project-footer>
+        <div class="health-bot-appearance-wrapper">
+          <app-preview-block
+            title="Define the HealthBot appearance!"
+            backgroundImage="health-bot-1st-background"
+            deviceVideo="healthbot-appearance"
+            [desktop]="true"
+          >
+          </app-preview-block>
+        </div>
+
+        <div class="flex-row space-between">
+          <app-preview-block
+            class="halfed"
+            title="Ask your questions in a suitable format!"
+            backgroundImage="health-bot-2nd-background"
+            deviceImage="factually-questions"
+            [tablet]="true"
+          >
+          </app-preview-block>
+
+          <app-preview-block
+            class="halfed"
+            title="Set up tone of voice!"
+            backgroundImage="health-bot-3rd-background"
+            deviceImage="factually-voice"
+            [tablet]="true"
+          >
+          </app-preview-block>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+
+  <div class="project-wrapper lighten fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="result">
+        <h5>Key challenges & Results</h5>
+
+        <div class="statistic">
+          <div class="statistic-item">
+            <h4>User satisfaction rate</h4>
+            <h2>
+              86.8%
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>System usability scale</h4>
+            <h2>
+              78.5%
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>Task completion rate</h4>
+            <h2>
+              92.3%
+            </h2>
+          </div>
+          <div class="statistic-item">
+            <h4>Retention rate</h4>
+            <h2>
+              72.6%
+            </h2>
+          </div>
+        </div>
+
+        <div class="challenges-and-results">
+          <app-list class="challenges" title="Challenges" [items]="challenges" icon="next-icon-orange"></app-list>
+          <app-list class="results" title="Results" [items]="results" icon="check-orange"></app-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="content-wrapper">
+      <div class="working-process">
+        <h5>Working process</h5>
+
+        <p>Explore the various stages below to gain insight into the approach and methodologies.</p>
+
+        <div class="working-process-wrapper">
+          <div class="working-process-list">
+            <app-expandable-section
+              *ngFor="let item of workingProcessList; index as i"
+              [title]="item.title"
+              [isExpanded]="item.opened"
+              [showBottomLine]="i !== workingProcessList.length - 1"
+              (toggle)="toggleSection(item.id)"
+            >
+              <span [innerHTML]="item.content"></span>
+            </app-expandable-section>
+          </div>
+
+          <div class="working-process-image"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-wrapper fade-animation" appScrollMonitor>
+    <div class="factually-health-2nd-screen background-image"></div>
+  </div>
+
+  <footer class="project-wrapper">
+    <div class="content-wrapper">
+      <app-single-project-footer></app-single-project-footer>
+    </div>
+  </footer>
+</ng-container>
+
 

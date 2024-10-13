@@ -7,6 +7,7 @@ import { PreviewBlockComponent } from "../../components/preview-block/preview-bl
 import { ScrollMonitorDirective } from "../../../../directives/scroll-monitor.directive";
 import { SingleProjectFooterComponent } from "../../components/single-project-footer/single-project-footer.component";
 import { SingleProjectHeaderComponent } from "../../components/single-project-header/single-project-header.component";
+import { PasswordCheckComponent } from "../../components/password-check/password-check.component";
 
 @Component({
   selector: 'app-factually-health',
@@ -20,7 +21,8 @@ import { SingleProjectHeaderComponent } from "../../components/single-project-he
         PreviewBlockComponent,
         ScrollMonitorDirective,
         SingleProjectFooterComponent,
-        SingleProjectHeaderComponent
+        SingleProjectHeaderComponent,
+        PasswordCheckComponent
     ],
   templateUrl: './factually-health.component.html',
   styleUrl: './factually-health.component.scss'
@@ -110,5 +112,9 @@ export class FactuallyHealthComponent {
         item.opened = !item.opened;
       }
     })
+  }
+
+  showProject() {
+    this.passwordPassed = true;
   }
 }
