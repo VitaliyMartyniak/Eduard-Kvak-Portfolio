@@ -25,7 +25,20 @@
             "value": "application/pdf"
           }
         ]
-      }
+      },
+      {
+        "source": "/assets/pdf/Projects - Eduard Kvak.pdf",
+        "headers": [
+          {
+            "key": "Content-Disposition",
+            "value": "inline; filename=\"Projects - Eduard Kvak.pdf\""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/pdf"
+          }
+        ]
+      },
     ]
   }
 }
