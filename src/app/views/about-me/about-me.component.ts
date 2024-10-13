@@ -260,7 +260,7 @@ export class AboutMeComponent {
     {
       name: 'Car IQ Inc.',
       period: 'Oct 2022 - Aug 2024',
-      position: 'Senior-lead product designer',
+      position: 'Lead Senior Product Designer',
       companyType: 'Product',
       responsibilities: ['Led the design team of 3 designers, created and distributed tasks, approved design solutions, doubling team output.',
         'Created design systems, documentation, guidelines, and set up design principles that decreased the design process time by ~40%.',
@@ -271,12 +271,12 @@ export class AboutMeComponent {
       ],
       relatedProjectTitle: 'Payment platform for fleets',
       relatedProjectSubtitle: 'Enables vehicles to initiate, validate, and complete authorized transactions.',
-      relatedProjectLink: 'car-iq-inc'
+      relatedProjectLink: 'car-iq-pay'
     },
     {
       name: 'Cieden',
       period: 'Jun 2021 - Oct 2022',
-      position: 'Senior-lead product designer',
+      position: 'Lead Senior Product Designer',
       companyType: 'Outsource, Outstaff',
       responsibilities: ['Led the design team of 4 designers, hiring new designers, and assisting with managing internal company structure.',
         'Led the calls with clients and stakeholders.',
@@ -287,7 +287,7 @@ export class AboutMeComponent {
       ],
       relatedProjectTitle: 'Q&A platform & e-Book reader',
       relatedProjectSubtitle: 'Provides seamless content sharing and engaging interactive reading.',
-      relatedProjectLink: 'cieden'
+      relatedProjectLink: 'clarity'
     },
     {
       name: 'Excited',
@@ -324,11 +324,10 @@ export class AboutMeComponent {
     }
   ]
 
-  downloadPdf(): void {
-    this.http.get('assets/pdf/CV.pdf', { responseType: 'blob' }).pipe(
-      map((blob: Blob) => {
-        saveAs(blob, 'Eduard Kvak CV');
-      })
-    ).subscribe();
+  openPDF(): void {
+    this.http.get('assets/pdf/Resumé - Eduard Kvak.pdf', { responseType: 'blob' }).subscribe((blob: Blob) => {
+      const fileURL = URL.createObjectURL(blob);
+      window.open(fileURL, '_blank');
+    });
   }
 }

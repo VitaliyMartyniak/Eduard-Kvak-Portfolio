@@ -6,6 +6,7 @@ import {NavigationComponent} from "../../components/navigation/navigation.compon
 import {ProjectCardsComponent} from "../../components/project-cards/project-cards.component";
 import {FooterNavigationComponent} from "../../components/footer-navigation/footer-navigation.component";
 import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directive";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-projects',
@@ -18,14 +19,15 @@ import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directiv
     NavigationComponent,
     ProjectCardsComponent,
     FooterNavigationComponent,
-    ScrollMonitorDirective
+    ScrollMonitorDirective,
+    HttpClientModule
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
 
-  constructor(private router: Router, private location: Location) {
+  constructor(private http: HttpClient) {
   }
 
   projects = [
@@ -71,4 +73,11 @@ export class ProjectsComponent {
       ]
     }
   ]
+
+  openPDF(): void {
+    this.http.get('assets/pdf/Projects - Eduard Kvak.pdf', { responseType: 'blob' }).subscribe((blob: Blob) => {
+      const fileURL = URL.createObjectURL(blob);
+      window.open(fileURL, '_blank');
+    });
+  }
 }

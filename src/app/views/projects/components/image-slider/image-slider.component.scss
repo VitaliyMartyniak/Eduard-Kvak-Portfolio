@@ -6,13 +6,13 @@
 .carousel-track-left {
   display: flex;
   animation: scroll-left linear infinite;
-  animation-duration: 25s; /* Adjust the duration for smooth scrolling */
+  animation-duration: 60s; /* Adjust the duration for smooth scrolling */
 }
 
 .carousel-track-right {
   display: flex;
   animation: scroll-right linear infinite;
-  animation-duration: 25s; /* Adjust the duration for smooth scrolling */
+  animation-duration: 60s; /* Adjust the duration for smooth scrolling */
 }
 
 .carousel-item {
@@ -33,7 +33,7 @@
   }
 
   50% {
-    transform: translateX(-2600px);
+    transform: translateX(-180%);
   }
 
   to {
@@ -43,7 +43,7 @@
 
 @keyframes scroll-right {
   from {
-    transform: translateX(-2600px);
+    transform: translateX(-180%);
   }
 
   50% {
@@ -51,6 +51,6 @@
   }
 
   to {
-    transform: translateX(-2600px);
+    transform: translateX(-180%);
   }
 }

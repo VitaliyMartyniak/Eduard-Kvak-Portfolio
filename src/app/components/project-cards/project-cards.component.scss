@@ -8,31 +8,8 @@
     text-decoration: none;
     color: #DBD1C5;
 
-    span.link .text {
-      position: relative;
-    }
-
-    & span.link .text::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -2px;
-      left: 0;
-      background-color: #D57A66;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease-in-out, transform-origin 0s 0.3s;
-    }
-
-    &:hover span.link .text::after {
-      transform: scaleX(1);
-      transform-origin: right;
-    }
-
-    &:not(:hover) span.link .text::after {
-      transform: scaleX(0);
-      transform-origin: left;
+    &:hover .subtitle {
+      text-decoration: underline;
     }
 
     &:last-child {
