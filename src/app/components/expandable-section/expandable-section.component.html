@@ -6,7 +6,7 @@
       <!--      <img *ngIf="isExpanded" src="../../../assets/images/cross-sign.svg" alt="cross sign">-->
     </button>
   </div>
-  <div class="section-content no-fade-animation" [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'">
+  <div class="section-content" [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'">
     <ng-content></ng-content>
   </div>
 </div>

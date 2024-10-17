@@ -4,13 +4,10 @@ import {ExpandableSectionComponent} from "../../components/expandable-section/ex
 import { NgForOf, NgIf } from "@angular/common";
 import {Location} from '@angular/common';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import {map} from "rxjs";
-import { saveAs } from 'file-saver';
 import {NavigationComponent} from "../../components/navigation/navigation.component";
 import {SimpleCardsComponent} from "../../components/simple-cards/simple-cards.component";
 import {FooterNavigationComponent} from "../../components/footer-navigation/footer-navigation.component";
 import {NumberAnimationComponent} from "../../components/number-animation/number-animation.component";
-import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directive";
 
 @Component({
   selector: 'app-about-me',
@@ -24,7 +21,6 @@ import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directiv
     SimpleCardsComponent,
     FooterNavigationComponent,
     NumberAnimationComponent,
-    ScrollMonitorDirective,
     NgIf
   ],
   templateUrl: './about-me.component.html',

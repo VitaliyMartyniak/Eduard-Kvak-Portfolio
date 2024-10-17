@@ -2,7 +2,7 @@
 
   .project {
     display: flex;
-    border-bottom: 2px solid #DBD1C5;
+    border-bottom: 1px solid #DBD1C5;
     padding-bottom: 48px;
     margin-bottom: 48px;
     text-decoration: none;
@@ -74,11 +74,11 @@
           flex-wrap: wrap;
 
           .industry {
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 4px 12px;
             font-size: 20px;
             line-height: 32px;
-            border: 2px solid #F7EDE2;
+            border: 1px solid #F7EDE2;
             font-weight: 400;
             margin-right: 12px;
           }

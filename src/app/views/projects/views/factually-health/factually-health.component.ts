@@ -4,7 +4,6 @@ import { ImageSliderComponent } from "../../components/image-slider/image-slider
 import { ListComponent } from "../../components/list/list.component";
 import { NgForOf, NgIf } from "@angular/common";
 import { PreviewBlockComponent } from "../../components/preview-block/preview-block.component";
-import { ScrollMonitorDirective } from "../../../../directives/scroll-monitor.directive";
 import { SingleProjectFooterComponent } from "../../components/single-project-footer/single-project-footer.component";
 import { SingleProjectHeaderComponent } from "../../components/single-project-header/single-project-header.component";
 import { PasswordCheckComponent } from "../../components/password-check/password-check.component";
@@ -19,7 +18,6 @@ import { PasswordCheckComponent } from "../../components/password-check/password
         NgForOf,
         NgIf,
         PreviewBlockComponent,
-        ScrollMonitorDirective,
         SingleProjectFooterComponent,
         SingleProjectHeaderComponent,
         PasswordCheckComponent

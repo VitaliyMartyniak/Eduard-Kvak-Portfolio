@@ -11,34 +11,6 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ],
-    "headers": [
-      {
-        "source": "/assets/pdf/Resumé - Eduard Kvak.pdf",
-        "headers": [
-          {
-            "key": "Content-Disposition",
-            "value": "inline; filename=\"Resumé - Eduard Kvak.pdf\""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/pdf"
-          }
-        ]
-      },
-      {
-        "source": "/assets/pdf/Projects - Eduard Kvak.pdf",
-        "headers": [
-          {
-            "key": "Content-Disposition",
-            "value": "inline; filename=\"Projects - Eduard Kvak.pdf\""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/pdf"
-          }
-        ]
-      }
     ]
   }
 }

@@ -44,10 +44,8 @@
       width: 392px;
       min-width: 392px;
       height: 428px;
-      border: 2px solid #D57A66;
-      border-right: 6px solid #D57A66;
-      border-bottom: 6px solid #D57A66;
-      border-radius: 48px;
+      border: 1px solid #D57A66;
+      border-radius: 32px;
       background: url("/assets/images/eduard-photo.png") center no-repeat;
       background-size: cover;
       margin-left: 56px;
@@ -60,7 +58,7 @@
 
     .statistic-item {
       width: 25%;
-      border-right: 2px solid #DBD1C5;
+      border-right: 1px solid #DBD1C5;
       padding: 0 24px;
 
       &:first-child {
@@ -115,7 +113,7 @@
             display: flex;
             align-items: center;
             padding: 4px 12px;
-            border: 2px solid #DBD1C5;
+            border: 1px solid #DBD1C5;
             border-radius: 8px;
             margin-right: 12px;
             margin-bottom: 12px;
@@ -309,7 +307,7 @@
     padding: 76px 0 52px;
 
     .education-item {
-      border-bottom: 4px solid #DBD1C5;
+      border-bottom: 1px solid #DBD1C5;
 
       &:last-child {
         border-bottom: none;
@@ -361,7 +359,7 @@
 
       .experience-item {
         padding: 48px 0;
-        border-bottom: 2px solid #DBD1C5;
+        border-bottom: 1px solid #DBD1C5;
 
         &:last-child {
           margin-bottom: 0;
@@ -449,11 +447,13 @@
 
         .related-project-block {
           display: flex;
-          border-radius: 32px;
+          border-radius: 24px;
           padding: 32px;
-          border: 2px solid #D57A66;
-          border-bottom: 6px solid #D57A66;
-          border-right: 6px solid #D57A66;
+          border: 1px solid #D57A66;
+
+          &:hover h3 {
+            text-decoration: underline;
+          }
 
           p {
             font-size: 20px;

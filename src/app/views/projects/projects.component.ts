@@ -5,7 +5,6 @@ import {Router, RouterLink} from "@angular/router";
 import {NavigationComponent} from "../../components/navigation/navigation.component";
 import {ProjectCardsComponent} from "../../components/project-cards/project-cards.component";
 import {FooterNavigationComponent} from "../../components/footer-navigation/footer-navigation.component";
-import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directive";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
@@ -19,7 +18,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavigationComponent,
     ProjectCardsComponent,
     FooterNavigationComponent,
-    ScrollMonitorDirective,
     HttpClientModule
   ],
   templateUrl: './projects.component.html',

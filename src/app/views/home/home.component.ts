@@ -5,7 +5,6 @@ import {NavigationComponent} from "../../components/navigation/navigation.compon
 import {ProjectCardsComponent} from "../../components/project-cards/project-cards.component";
 import {FooterNavigationComponent} from "../../components/footer-navigation/footer-navigation.component";
 import {SimpleCardsComponent} from "../../components/simple-cards/simple-cards.component";
-import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directive";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +16,6 @@ import { ScrollMonitorDirective } from "../../directives/scroll-monitor.directiv
     ProjectCardsComponent,
     FooterNavigationComponent,
     SimpleCardsComponent,
-    ScrollMonitorDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

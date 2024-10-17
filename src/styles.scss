@@ -14,21 +14,6 @@ body {
   font-family: 'Outfit';
 }
 
-.fade-animation * {
-  scale: .8;
-  opacity: 0;
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: 0px 20vh;
-}
-
-@keyframes fade-in {
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-}
-
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -87,7 +72,7 @@ button {
   padding: 16px 32px;
   font-size: 20px;
   font-weight: 700;
-  border-radius: 16px;
+  border-radius: 12px;
   border: none;
   cursor: pointer;
 }
@@ -101,7 +86,7 @@ button {
   padding: 16px 32px;
   font-size: 20px;
   font-weight: 700;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 2px solid #D57A66;
   cursor: pointer;
 }
@@ -194,19 +179,23 @@ button {
       margin-top: 76px;
       margin-bottom: 76px;
 
-      h4 {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 32px;
-        color: #D57A66;
-        margin: 0 0 12px;
-      }
+      .project-description {
+        width: 62%;
 
-      h2 {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 60px;
-        margin: 0 0 12px;
+        h4 {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 32px;
+          color: #D57A66;
+          margin: 0 0 12px;
+        }
+
+        h2 {
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 60px;
+          margin: 0 0 12px;
+        }
       }
 
       .industries-and-project-links {
@@ -221,11 +210,11 @@ button {
           flex-wrap: wrap;
 
           .industry {
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 4px 12px;
             font-size: 20px;
             line-height: 32px;
-            border: 2px solid #F7EDE2;
+            border: 1px solid #F7EDE2;
             font-weight: 400;
             margin-right: 12px;
           }
@@ -354,13 +343,18 @@ button {
               align-items: center;
               color: #D57A66;
               margin: 0 0 8px;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 32px;
 
               img {
                 margin-right: 8px;
               }
 
               span {
+                font-size: 20px;
                 font-weight: 500;
+                line-height: 32px;
               }
             }
 
@@ -425,14 +419,14 @@ button {
 
     .statistic {
       display: flex;
-      border: 2px solid #D57A66;
+      border: 1px solid #D57A66;
       padding: 48px;
       border-radius: 24px;
       margin-bottom: 48px;
 
       .statistic-item {
         width: 25%;
-        border-right: 2px solid #DBD1C5;
+        border-right: 1px solid #DBD1C5;
         padding: 0 24px;
 
         &:first-child {
