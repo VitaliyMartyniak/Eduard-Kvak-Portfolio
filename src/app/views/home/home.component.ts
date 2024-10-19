@@ -5,6 +5,7 @@ import {NavigationComponent} from "../../components/navigation/navigation.compon
 import {ProjectCardsComponent} from "../../components/project-cards/project-cards.component";
 import {FooterNavigationComponent} from "../../components/footer-navigation/footer-navigation.component";
 import {SimpleCardsComponent} from "../../components/simple-cards/simple-cards.component";
+import { ReviewSliderComponent } from '../projects/components/review-slider/review-slider.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import {SimpleCardsComponent} from "../../components/simple-cards/simple-cards.c
     ProjectCardsComponent,
     FooterNavigationComponent,
     SimpleCardsComponent,
+    ReviewSliderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

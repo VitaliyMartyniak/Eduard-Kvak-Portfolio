@@ -1,0 +1,43 @@
+<div class="reviews-block">
+  <header class="flex-row space-between centered-vert">
+    <h2>{{title}}</h2>
+
+    <div class="flex-row centered-vert">
+      <div class="dots">
+      <span
+        *ngFor="let review of reviews; let i = index"
+        [class.active]="i === currentReviewIndex">
+      </span>
+      </div>
+
+      <div class="controls">
+        <span (click)="previousReview()"><img src="assets/images/back-icon.svg"></span>
+        <span (click)="nextReview()"><img src="assets/images/next-icon-orange.svg"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="slider-wrapper">
+    <div class="slider" [style.transform]="'translateX(-' + currentReviewIndex * 100 + '%)'">
+      <div class="slide flex-row" *ngFor="let review of reviews">
+
+        <div class="quote-icon-wrapper">
+          <img src="assets/images/quote-icon.svg" />
+        </div>
+
+        <div>
+          <p class="quote">{{ review.text }}</p>
+
+          <div class="flex-row space-between">
+            <div>
+              <h4 class="author">{{ review.author }}</h4>
+              <p class="position">{{ review.position }}</p>
+            </div>
+
+            <a class="alt-button" href="https://www.linkedin.com/in/eduard-kvak/details/recommendations/" target="_blank">Read on Linkedin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

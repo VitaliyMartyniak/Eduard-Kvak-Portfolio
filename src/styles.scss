@@ -19,7 +19,7 @@ body {
   flex-direction: row;
 }
 
-.flex-coulumn {
+.flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -269,10 +269,15 @@ button {
     }
 
     h5 {
+      width: 62%;
       font-size: 40px;
       font-weight: 700;
       line-height: 60px;
       margin: 0 0 12px;
+
+      &+.subtitle {
+        width: 62%;
+      }
     }
 
     h6 {

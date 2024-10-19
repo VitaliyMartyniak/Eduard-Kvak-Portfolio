@@ -1,0 +1,95 @@
+.reviews-block {
+  border-radius: 8px;
+  padding-top: 76px;
+  padding-bottom: 76px;
+
+  header {
+    margin: 0 0 48px;
+
+    h2 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+
+      span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-right: 16px;
+        background-color: #DBD1C5;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        &.active {
+          background-color: #D57A66;
+        }
+      }
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-left: 48px;
+
+      span {
+        cursor: pointer;
+
+        &:first-of-type {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .slider {
+    display: flex;  // Keep all slides in a row
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+
+    .quote-icon-wrapper {
+      margin-right: 24px;
+    }
+
+    .quote {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 42px;
+      margin: 0 0 48px;
+    }
+
+    .author {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      text-align: left;
+      margin: 0 0 4px;
+    }
+
+    .position {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 32px;
+      color: #D57A66;
+      margin: 0;
+    }
+
+    .alt-button {
+      align-self: flex-end;
+    }
+  }
+}
