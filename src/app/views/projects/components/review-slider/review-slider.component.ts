@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgForOf } from '@angular/common';
 
 @Component({
@@ -10,7 +10,7 @@ import { NgForOf } from '@angular/common';
   templateUrl: './review-slider.component.html',
   styleUrl: './review-slider.component.scss'
 })
-export class ReviewSliderComponent {
+export class ReviewSliderComponent implements OnInit, OnDestroy {
   @Input() title = '';
 
   reviews = [
@@ -37,6 +37,7 @@ export class ReviewSliderComponent {
   ];
 
   currentReviewIndex = 0;
+  intervalId: any;
 
   // Move to the next review
   nextReview() {
@@ -53,6 +54,19 @@ export class ReviewSliderComponent {
       this.currentReviewIndex--;
     } else {
       this.currentReviewIndex = this.reviews.length - 1;  // Loop back to the last review
+    }
+  }
+
+  ngOnInit() {
+    this.intervalId = setInterval(() => {
+      this.nextReview();
+    }, 5000);
+  }
+
+  // Clear the interval when the component is destroyed to avoid memory leaks
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
     }
   }
 }

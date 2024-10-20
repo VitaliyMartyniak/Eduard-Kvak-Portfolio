@@ -71,7 +71,7 @@ button {
   color: #040F0F;
   padding: 16px 32px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -85,7 +85,7 @@ button {
   color: #DBD1C5;
   padding: 16px 32px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 12px;
   border: 2px solid #D57A66;
   cursor: pointer;
@@ -99,7 +99,7 @@ button {
   outline: none;
   color: #D57A66;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 32px;
   cursor: pointer;
 
@@ -184,7 +184,7 @@ button {
 
         h4 {
           font-size: 20px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 32px;
           color: #D57A66;
           margin: 0 0 12px;
@@ -192,7 +192,7 @@ button {
 
         h2 {
           font-size: 40px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 60px;
           margin: 0 0 12px;
         }
@@ -229,7 +229,7 @@ button {
             align-items: center;
             color: #D57A66;
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 32px;
             margin-right: 48px;
 
@@ -271,7 +271,7 @@ button {
     h5 {
       width: 62%;
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 60px;
       margin: 0 0 12px;
 
@@ -282,7 +282,7 @@ button {
 
     h6 {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 36px;
       margin-bottom: 16px;
       margin-top: 48px;
@@ -349,7 +349,7 @@ button {
               color: #D57A66;
               margin: 0 0 8px;
               font-size: 20px;
-              font-weight: 700;
+              font-weight: 600;
               line-height: 32px;
 
               img {
@@ -358,14 +358,14 @@ button {
 
               span {
                 font-size: 20px;
-                font-weight: 500;
+                font-weight: 400;
                 line-height: 32px;
               }
             }
 
             span {
               font-size: 20px;
-              font-weight: 700;
+              font-weight: 400;
               line-height: 32px;
             }
           }
@@ -411,14 +411,14 @@ button {
 
     h5 {
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 60px;
       margin: 0 0 48px;
     }
 
     h2 {
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 60px;
     }
 
@@ -445,7 +445,7 @@ button {
 
         h4 {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 36px;
           margin: 0 0 8px;
           color: #D57A66;
@@ -536,7 +536,7 @@ video {
     outline: none;
     transition: background-color 0.3s ease;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 32px;
 
     &.active {
